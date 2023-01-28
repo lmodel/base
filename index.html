@@ -1,0 +1,2932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/base/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>base</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#base" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="base" class="md-header__button md-logo" aria-label="base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="base" class="md-nav__button md-logo" aria-label="base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Index
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Index
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    Slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    Enumerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    Slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    Enumerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/lmodel/base/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="base">Base</h1>
+<p>Entity and association taxonomy and datamodel for named thing abstractions.</p>
+<p>URI: https://w3id.org/lmodel/base
+Name: base</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Activity/">Activity</a></td>
+<td>An activity is something that occurs over a period of time and acts upon or w...</td>
+</tr>
+<tr>
+<td><a href="ActivityAndBehavior/">ActivityAndBehavior</a></td>
+<td>Activity or behavior of any independent integral healthy, organization or mec...</td>
+</tr>
+<tr>
+<td><a href="AdministrativeEntity/">AdministrativeEntity</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AdministrativeOperation/">AdministrativeOperation</a></td>
+<td>A event intended for use in the operational administration, mitigation, repai...</td>
+</tr>
+<tr>
+<td><a href="AdministrativeOperationExposure/">AdministrativeOperationExposure</a></td>
+<td>An intake of a particular administrative operation</td>
+</tr>
+<tr>
+<td><a href="AdministrativeOperationToClassAssociation/">AdministrativeOperationToClassAssociation</a></td>
+<td>An interaction between a administrative operation and a class or subclasses</td>
+</tr>
+<tr>
+<td><a href="AdministrativeOperationToEntityAssociationMixin/">AdministrativeOperationToEntityAssociationMixin</a></td>
+<td>An interaction between a administrative operation and another entity</td>
+</tr>
+<tr>
+<td><a href="Agent/">Agent</a></td>
+<td>person, group, organization or project that provides a piece of information (...</td>
+</tr>
+<tr>
+<td><a href="Annotation/">Annotation</a></td>
+<td>Baselink Model root class for entity annotations</td>
+</tr>
+<tr>
+<td><a href="Article/">Article</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AssemblyComplex/">AssemblyComplex</a></td>
+<td>A stable assembly of two or more assemblies, i</td>
+</tr>
+<tr>
+<td><a href="AssemblyMixin/">AssemblyMixin</a></td>
+<td>The functional group of a single named thing locus</td>
+</tr>
+<tr>
+<td><a href="AssemblyToComponentAssociation/">AssemblyToComponentAssociation</a></td>
+<td>A functional association between a assembly (class, subclasses or complex) an...</td>
+</tr>
+<tr>
+<td><a href="AssemblyToComputationalProcessAssociation/">AssemblyToComputationalProcessAssociation</a></td>
+<td>A functional association between a assembly (class, subclasses or complex) an...</td>
+</tr>
+<tr>
+<td><a href="AssemblyToEntityAssociationMixin/">AssemblyToEntityAssociationMixin</a></td>
+<td>an association which has a assembly mixin mixin as a subject</td>
+</tr>
+<tr>
+<td><a href="AssemblyToOperationalActivityAssociation/">AssemblyToOperationalActivityAssociation</a></td>
+<td>A functional association between a assembly (class, subclasses or complex) an...</td>
+</tr>
+<tr>
+<td><a href="Association/">Association</a></td>
+<td>A typed association between two entities, supported by evidence</td>
+</tr>
+<tr>
+<td><a href="Attribute/">Attribute</a></td>
+<td>A property or characteristic of an entity</td>
+</tr>
+<tr>
+<td><a href="Behavior/">Behavior</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="BehaviorToBehavioralFeatureAssociation/">BehaviorToBehavioralFeatureAssociation</a></td>
+<td>An association between an aggregate behavior and a behavioral feature manifes...</td>
+</tr>
+<tr>
+<td><a href="BehavioralExposure/">BehavioralExposure</a></td>
+<td>A behavioral exposure is a factor relating to behavior impacting an individua...</td>
+</tr>
+<tr>
+<td><a href="BehavioralFeature/">BehavioralFeature</a></td>
+<td>A observable feature which is behavioral in nature</td>
+</tr>
+<tr>
+<td><a href="BehavioralOutcome/">BehavioralOutcome</a></td>
+<td>An outcome resulting from an exposure event which is the manifestation of som...</td>
+</tr>
+<tr>
+<td><a href="BiologicalSex/">BiologicalSex</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Book/">Book</a></td>
+<td>This class may rarely be instantiated except if use cases of a given knowledg...</td>
+</tr>
+<tr>
+<td><a href="BookChapter/">BookChapter</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Case/">Case</a></td>
+<td>An individual instance of a particular situation; an example of something occ...</td>
+</tr>
+<tr>
+<td><a href="CaseToEntityAssociationMixin/">CaseToEntityAssociationMixin</a></td>
+<td>An abstract association for use where the case is the subject</td>
+</tr>
+<tr>
+<td><a href="CaseToObservableFeatureAssociation/">CaseToObservableFeatureAssociation</a></td>
+<td>An association between a case (e</td>
+</tr>
+<tr>
+<td><a href="ChiSquaredAnalysisResult/">ChiSquaredAnalysisResult</a></td>
+<td>A result of a chi squared analysis</td>
+</tr>
+<tr>
+<td><a href="Class/">Class</a></td>
+<td>collection of items in an ontology sharing common characteristics</td>
+</tr>
+<tr>
+<td><a href="ClassGroupingMixin/">ClassGroupingMixin</a></td>
+<td>any grouping of multiple classes or subclasses</td>
+</tr>
+<tr>
+<td><a href="ClassOrSubclasses/">ClassOrSubclasses</a></td>
+<td>A union of class or subclasses</td>
+</tr>
+<tr>
+<td><a href="ClassToClassAssociation/">ClassToClassAssociation</a></td>
+<td>abstract parent class for different kinds of class-class or subclasses to sub...</td>
+</tr>
+<tr>
+<td><a href="ClassToEntityAssociationMixin/">ClassToEntityAssociationMixin</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ClassToExpressionSiteAssociation/">ClassToExpressionSiteAssociation</a></td>
+<td>An association between a class and an expression site, possibly qualified by ...</td>
+</tr>
+<tr>
+<td><a href="ClassToFaultAssociation/">ClassToFaultAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ClassToObservableFeatureAssociation/">ClassToObservableFeatureAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ClassToPathwayAssociation/">ClassToPathwayAssociation</a></td>
+<td>An interaction between a class or subclasses and a computational process or p...</td>
+</tr>
+<tr>
+<td><a href="Cohort/">Cohort</a></td>
+<td>A group of people banded together or treated as a group who share common char...</td>
+</tr>
+<tr>
+<td><a href="CommonDataElement/">CommonDataElement</a></td>
+<td>A Common Data Element (CDE) is a standardized, precisely defined question, pa...</td>
+</tr>
+<tr>
+<td><a href="ComplexOperationalMixture/">ComplexOperationalMixture</a></td>
+<td>A complex operational mixture is a control mixture composed of two or more op...</td>
+</tr>
+<tr>
+<td><a href="Component/">Component</a></td>
+<td>The component is the smallest system entity that can be deployed, isolated, a...</td>
+</tr>
+<tr>
+<td><a href="ComponentSystem/">ComponentSystem</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ComponentType/">ComponentType</a></td>
+<td>A component type defines the set of components running the same software and ...</td>
+</tr>
+<tr>
+<td><a href="ComponentTypeToEntityAssociationMixin/">ComponentTypeToEntityAssociationMixin</a></td>
+<td>An relationship between a component type and another entity</td>
+</tr>
+<tr>
+<td><a href="ComputationalEntity/">ComputationalEntity</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ComputationalProcess/">ComputationalProcess</a></td>
+<td>One or more causally connected executions of operational functions</td>
+</tr>
+<tr>
+<td><a href="ComputationalProcessOrActivity/">ComputationalProcessOrActivity</a></td>
+<td>Either an individual operational activity, or a collection of causally connec...</td>
+</tr>
+<tr>
+<td><a href="ConfidenceLevel/">ConfidenceLevel</a></td>
+<td>Level of confidence in a statement</td>
+</tr>
+<tr>
+<td><a href="ContributorAssociation/">ContributorAssociation</a></td>
+<td>Any association between an entity (such as a publication) and various agents ...</td>
+</tr>
+<tr>
+<td><a href="ControlEntity/">ControlEntity</a></td>
+<td>A control entity is a entity that pertains to control or orchestration</td>
+</tr>
+<tr>
+<td><a href="ControlEntityAssessesNamedThingAssociation/">ControlEntityAssessesNamedThingAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ControlEntityOrClassOrSubclasses/">ControlEntityOrClassOrSubclasses</a></td>
+<td>A union of control entities and subclasses, and class or subclasses</td>
+</tr>
+<tr>
+<td><a href="ControlEntityOrSystemOperation/">ControlEntityOrSystemOperation</a></td>
+<td>A union of control entities and subclasses, and system operation</td>
+</tr>
+<tr>
+<td><a href="ControlEntityToEntityAssociationMixin/">ControlEntityToEntityAssociationMixin</a></td>
+<td>An interaction between a control entity and another entity</td>
+</tr>
+<tr>
+<td><a href="ControlExposure/">ControlExposure</a></td>
+<td>A control exposure is an intake of a particular control entity</td>
+</tr>
+<tr>
+<td><a href="ControlMixture/">ControlMixture</a></td>
+<td>A control mixture is a control entity composed of two or more operational ent...</td>
+</tr>
+<tr>
+<td><a href="ControlOrAdministrativeOperationOrRestoration/">ControlOrAdministrativeOperationOrRestoration</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ControlRole/">ControlRole</a></td>
+<td>A role played by the entity or part thereof within a control context</td>
+</tr>
+<tr>
+<td><a href="ControlToControlAssociation/">ControlToControlAssociation</a></td>
+<td>A relationship between two control entities</td>
+</tr>
+<tr>
+<td><a href="ControlToEntityAssociationMixin/">ControlToEntityAssociationMixin</a></td>
+<td>An interaction between a control entity and another entity</td>
+</tr>
+<tr>
+<td><a href="ControlToFaultOrObservableFeatureAssociation/">ControlToFaultOrObservableFeatureAssociation</a></td>
+<td>An interaction between a control entity and a observable feature or fault, wh...</td>
+</tr>
+<tr>
+<td><a href="ControlToPathwayAssociation/">ControlToPathwayAssociation</a></td>
+<td>An interaction between a control entity and a computational process or pathwa...</td>
+</tr>
+<tr>
+<td><a href="ControllableClassToFaultAssociation/">ControllableClassToFaultAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Dataset/">Dataset</a></td>
+<td>an item that refers to a collection of data from a data source</td>
+</tr>
+<tr>
+<td><a href="DatasetDistribution/">DatasetDistribution</a></td>
+<td>an item that holds distribution level information about a dataset</td>
+</tr>
+<tr>
+<td><a href="DatasetSummary/">DatasetSummary</a></td>
+<td>an item that holds summary level information about a dataset</td>
+</tr>
+<tr>
+<td><a href="DatasetVersion/">DatasetVersion</a></td>
+<td>an item that holds version level information about a dataset</td>
+</tr>
+<tr>
+<td><a href="DeploymentEntity/">DeploymentEntity</a></td>
+<td>A process location, or gross deployment part</td>
+</tr>
+<tr>
+<td><a href="Device/">Device</a></td>
+<td>A thing made or adapted for a particular purpose, especially a piece of mecha...</td>
+</tr>
+<tr>
+<td><a href="EmpiricalAttribute/">EmpiricalAttribute</a></td>
+<td>Attributes relating to a empirical manifestation</td>
+</tr>
+<tr>
+<td><a href="EmpiricalCourse/">EmpiricalCourse</a></td>
+<td>The course an entity typically takes from its onset, progression in time, and...</td>
+</tr>
+<tr>
+<td><a href="EmpiricalEntity/">EmpiricalEntity</a></td>
+<td>Any entity or process that exists in the empirical domain and outside the com...</td>
+</tr>
+<tr>
+<td><a href="EmpiricalFinding/">EmpiricalFinding</a></td>
+<td>this category is currently considered broad enough to tag empirical lab measu...</td>
+</tr>
+<tr>
+<td><a href="EmpiricalIntervention/">EmpiricalIntervention</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EmpiricalMeasurement/">EmpiricalMeasurement</a></td>
+<td>A empirical measurement is a special kind of attribute which results from a q...</td>
+</tr>
+<tr>
+<td><a href="EmpiricalModifier/">EmpiricalModifier</a></td>
+<td>Used to characterize and specify the observable changes with respect to sever...</td>
+</tr>
+<tr>
+<td><a href="Entity/">Entity</a></td>
+<td>Root Baselink Model class for all things and informational relationships, rea...</td>
+</tr>
+<tr>
+<td><a href="EntityToExposureEventAssociationMixin/">EntityToExposureEventAssociationMixin</a></td>
+<td>An association between some entity and an exposure event</td>
+</tr>
+<tr>
+<td><a href="EntityToFaultAssociation/">EntityToFaultAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EntityToFaultAssociationMixin/">EntityToFaultAssociationMixin</a></td>
+<td>mixin class for any association whose object (target node) is a fault</td>
+</tr>
+<tr>
+<td><a href="EntityToFaultOrObservableFeatureAssociationMixin/">EntityToFaultOrObservableFeatureAssociationMixin</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EntityToFeatureOrFaultQualifiersMixin/">EntityToFeatureOrFaultQualifiersMixin</a></td>
+<td>Qualifiers for entity to fault or observable feature associations</td>
+</tr>
+<tr>
+<td><a href="EntityToObservableFeatureAssociation/">EntityToObservableFeatureAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EntityToObservableFeatureAssociationMixin/">EntityToObservableFeatureAssociationMixin</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EntityToOutcomeAssociationMixin/">EntityToOutcomeAssociationMixin</a></td>
+<td>An association between some entity and an outcome</td>
+</tr>
+<tr>
+<td><a href="EnvironmentalExposure/">EnvironmentalExposure</a></td>
+<td>A environmental exposure is a factor relating to abiotic processes in the env...</td>
+</tr>
+<tr>
+<td><a href="EnvironmentalFeature/">EnvironmentalFeature</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EnvironmentalProcess/">EnvironmentalProcess</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EpidemiologicalOutcome/">EpidemiologicalOutcome</a></td>
+<td>An epidemiological outcome, such as societal fault burden, resulting from an ...</td>
+</tr>
+<tr>
+<td><a href="Event/">Event</a></td>
+<td>Something that happens at a given place and time</td>
+</tr>
+<tr>
+<td><a href="EvidenceType/">EvidenceType</a></td>
+<td>Class of evidence that supports an association</td>
+</tr>
+<tr>
+<td><a href="ExposureEvent/">ExposureEvent</a></td>
+<td>A (possibly time bounded) incidence of a feature of the environment of an sys...</td>
+</tr>
+<tr>
+<td><a href="ExposureEventToObservableFeatureAssociation/">ExposureEventToObservableFeatureAssociation</a></td>
+<td>Any association between an environment and a observable feature, where being ...</td>
+</tr>
+<tr>
+<td><a href="ExposureEventToOutcomeAssociation/">ExposureEventToOutcomeAssociation</a></td>
+<td>An association between an exposure event and an outcome</td>
+</tr>
+<tr>
+<td><a href="Fault/">Fault</a></td>
+<td>A disorder of structure or function, especially one that produces specific si...</td>
+</tr>
+<tr>
+<td><a href="FaultOrObservableFeature/">FaultOrObservableFeature</a></td>
+<td>Either one of a fault or an individual observable feature</td>
+</tr>
+<tr>
+<td><a href="FaultOrObservableFeatureExposure/">FaultOrObservableFeatureExposure</a></td>
+<td>A fault or observable feature state, when viewed as an exposure, represents a...</td>
+</tr>
+<tr>
+<td><a href="FaultOrObservableFeatureOutcome/">FaultOrObservableFeatureOutcome</a></td>
+<td>logical outcomes resulting from an exposure event which is the manifestation ...</td>
+</tr>
+<tr>
+<td><a href="FaultOrObservableFeatureToEntityAssociationMixin/">FaultOrObservableFeatureToEntityAssociationMixin</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="FaultOrObservableFeatureToLocationAssociation/">FaultOrObservableFeatureToLocationAssociation</a></td>
+<td>An association between either a fault or a observable feature and an named th...</td>
+</tr>
+<tr>
+<td><a href="FaultToEntityAssociationMixin/">FaultToEntityAssociationMixin</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="FaultToExposureEventAssociation/">FaultToExposureEventAssociation</a></td>
+<td>An association between an exposure event and a fault</td>
+</tr>
+<tr>
+<td><a href="FaultToObservableFeatureAssociation/">FaultToObservableFeatureAssociation</a></td>
+<td>An association between a fault and a observable feature in which the observab...</td>
+</tr>
+<tr>
+<td><a href="FaultyDeploymentExposure/">FaultyDeploymentExposure</a></td>
+<td>An abnormal deployment structure, when viewed as an exposure, representing an...</td>
+</tr>
+<tr>
+<td><a href="FaultyDeploymentOutcome/">FaultyDeploymentOutcome</a></td>
+<td>An outcome resulting from an exposure event which is the manifestation of an ...</td>
+</tr>
+<tr>
+<td><a href="FaultyDeploymentStructure/">FaultyDeploymentStructure</a></td>
+<td>An deployment structure with the potential of have an abnormal or deleterious...</td>
+</tr>
+<tr>
+<td><a href="FaultyEntityMixin/">FaultyEntityMixin</a></td>
+<td>A faulty (abnormal) structure or process</td>
+</tr>
+<tr>
+<td><a href="FaultyProcess/">FaultyProcess</a></td>
+<td>A computational function or a process having an abnormal or deleterious effec...</td>
+</tr>
+<tr>
+<td><a href="FaultyProcessExposure/">FaultyProcessExposure</a></td>
+<td>A faulty process, when viewed as an exposure, representing a precondition, le...</td>
+</tr>
+<tr>
+<td><a href="FaultyProcessOutcome/">FaultyProcessOutcome</a></td>
+<td>An outcome resulting from an exposure event which is the manifestation of a f...</td>
+</tr>
+<tr>
+<td><a href="FrequencyQualifierMixin/">FrequencyQualifierMixin</a></td>
+<td>Qualifier for frequency type associations</td>
+</tr>
+<tr>
+<td><a href="FrequencyQuantifier/">FrequencyQuantifier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="FunctionalAssociation/">FunctionalAssociation</a></td>
+<td>An association between a assembly mixin (class, subclasses, or complex of sub...</td>
+</tr>
+<tr>
+<td><a href="GeographicExposure/">GeographicExposure</a></td>
+<td>A geographic exposure is a factor relating to geographic proximity to some im...</td>
+</tr>
+<tr>
+<td><a href="GeographicLocation/">GeographicLocation</a></td>
+<td>a location that can be described in lat/long coordinates</td>
+</tr>
+<tr>
+<td><a href="GeographicLocationAtTime/">GeographicLocationAtTime</a></td>
+<td>a location that can be described in lat/long coordinates, for a particular ti...</td>
+</tr>
+<tr>
+<td><a href="Homogeneity/">Homogeneity</a></td>
+<td>the quality or state of being all the same or all of the same kind</td>
+</tr>
+<tr>
+<td><a href="IndividualSystem/">IndividualSystem</a></td>
+<td>An instance of an system</td>
+</tr>
+<tr>
+<td><a href="InformationContentEntity/">InformationContentEntity</a></td>
+<td>a piece of information that typically describes some topic of discourse or is...</td>
+</tr>
+<tr>
+<td><a href="InformationContentEntityToNamedThingAssociation/">InformationContentEntityToNamedThingAssociation</a></td>
+<td>association between a named thing and a information content entity where the ...</td>
+</tr>
+<tr>
+<td><a href="InformationResource/">InformationResource</a></td>
+<td>A database or knowledgebase and its supporting ecosystem of interfaces and se...</td>
+</tr>
+<tr>
+<td><a href="Inheritance/">Inheritance</a></td>
+<td>The pattern or 'mode' in which a particular acquired trait or disorder is pas...</td>
+</tr>
+<tr>
+<td><a href="LifecycleStage/">LifecycleStage</a></td>
+<td>A stage of development or growth of a system</td>
+</tr>
+<tr>
+<td><a href="MaterialSample/">MaterialSample</a></td>
+<td>A sample is a limited quantity of something (e</td>
+</tr>
+<tr>
+<td><a href="NamedSequence/">NamedSequence</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="NamedThing/">NamedThing</a></td>
+<td>a databased entity or concept/class</td>
+</tr>
+<tr>
+<td><a href="NamedThing/">NamedThing</a></td>
+<td>A generic grouping for any identifiable entity</td>
+</tr>
+<tr>
+<td><a href="ObservableFeature/">ObservableFeature</a></td>
+<td>A combination of entity and quality that makes up a observation statement</td>
+</tr>
+<tr>
+<td><a href="ObservableQuality/">ObservableQuality</a></td>
+<td>A property of a observable</td>
+</tr>
+<tr>
+<td><a href="Occurrent/">Occurrent</a></td>
+<td>A processual entity that has temporal parts and happens, unfolds or develops ...</td>
+</tr>
+<tr>
+<td><a href="OfflineMaintenance/">OfflineMaintenance</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="OfflineMaintenanceOutcome/">OfflineMaintenanceOutcome</a></td>
+<td>An outcome resulting from an exposure event which is the increased manifestat...</td>
+</tr>
+<tr>
+<td><a href="Onset/">Onset</a></td>
+<td>The beginning or start in which manifestations appear</td>
+</tr>
+<tr>
+<td><a href="OntologyClass/">OntologyClass</a></td>
+<td>a concept or class in an ontology, vocabulary or thesaurus</td>
+</tr>
+<tr>
+<td><a href="OperationalActivity/">OperationalActivity</a></td>
+<td>An execution of a operational function carried out by a subclasses or assembl...</td>
+</tr>
+<tr>
+<td><a href="OperationalActivityToPathwayAssociation/">OperationalActivityToPathwayAssociation</a></td>
+<td>Association that holds the relationship between a operational activity and th...</td>
+</tr>
+<tr>
+<td><a href="OperationalEntity/">OperationalEntity</a></td>
+<td>A operational entity is a control entity composed of individual or bonded ele...</td>
+</tr>
+<tr>
+<td><a href="OperationalMixture/">OperationalMixture</a></td>
+<td>A operational mixture is a control mixture composed of two or more operationa...</td>
+</tr>
+<tr>
+<td><a href="Outcome/">Outcome</a></td>
+<td>An entity that has the role of being the consequence of an exposure event</td>
+</tr>
+<tr>
+<td><a href="Pathway/">Pathway</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Person/">Person</a></td>
+<td>Represents a Person</td>
+</tr>
+<tr>
+<td><a href="PersonCollection/">PersonCollection</a></td>
+<td>A holder for Person objects</td>
+</tr>
+<tr>
+<td><a href="Phenomenon/">Phenomenon</a></td>
+<td>a fact or situation that is observed to exist or happen, especially one whose...</td>
+</tr>
+<tr>
+<td><a href="PhysicalEntity/">PhysicalEntity</a></td>
+<td>An entity that has material reality (a</td>
+</tr>
+<tr>
+<td><a href="PlanetaryEntity/">PlanetaryEntity</a></td>
+<td>Any entity or process that exists at the level of the whole planet</td>
+</tr>
+<tr>
+<td><a href="PopulationOfIndividualSystems/">PopulationOfIndividualSystems</a></td>
+<td>A collection of individuals from the same taxonomic class distinguished by on...</td>
+</tr>
+<tr>
+<td><a href="PopulationToPopulationAssociation/">PopulationToPopulationAssociation</a></td>
+<td>An association between a two populations</td>
+</tr>
+<tr>
+<td><a href="Procedure/">Procedure</a></td>
+<td>A series of actions conducted in a certain order or manner</td>
+</tr>
+<tr>
+<td><a href="ProcessedMaterial/">ProcessedMaterial</a></td>
+<td>A control entity (often a mixture) processed for some use</td>
+</tr>
+<tr>
+<td><a href="Publication/">Publication</a></td>
+<td>Any published piece of information</td>
+</tr>
+<tr>
+<td><a href="QuantityValue/">QuantityValue</a></td>
+<td>A value of an attribute that is quantitative and measurable, expressed as a c...</td>
+</tr>
+<tr>
+<td><a href="ReactionToCatalystAssociation/">ReactionToCatalystAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ReactionToParticipantAssociation/">ReactionToParticipantAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="RedundancyEntity/">RedundancyEntity</a></td>
+<td>A redundancy entity is a operational entity</td>
+</tr>
+<tr>
+<td><a href="RelationshipQuantifier/">RelationshipQuantifier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="RelationshipType/">RelationshipType</a></td>
+<td>An OWL property used as an edge label</td>
+</tr>
+<tr>
+<td><a href="Replica/">Replica</a></td>
+<td>The unit of service workload the component is capable of providing or protect...</td>
+</tr>
+<tr>
+<td><a href="Restoration/">Restoration</a></td>
+<td>A restoration is targeted at a fault or observable feature and may involve mu...</td>
+</tr>
+<tr>
+<td><a href="SensitivityQuantifier/">SensitivityQuantifier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Serial/">Serial</a></td>
+<td>This class may rarely be instantiated except if use cases of a given knowledg...</td>
+</tr>
+<tr>
+<td><a href="ServiceType/">ServiceType</a></td>
+<td>An information content entity that describes a workload by specifying the tot...</td>
+</tr>
+<tr>
+<td><a href="ServiceTypeToClassAssociation/">ServiceTypeToClassAssociation</a></td>
+<td>Any association between a service type and a class</td>
+</tr>
+<tr>
+<td><a href="ServiceTypeToEntityAssociationMixin/">ServiceTypeToEntityAssociationMixin</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ServiceTypeToFaultAssociation/">ServiceTypeToFaultAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ServiceTypeToObservableFeatureAssociation/">ServiceTypeToObservableFeatureAssociation</a></td>
+<td>Any association between one service type and a observable feature, where havi...</td>
+</tr>
+<tr>
+<td><a href="ServiceTypeToServiceTypePartAssociation/">ServiceTypeToServiceTypePartAssociation</a></td>
+<td>Any association between one service type and a service type entity that is a ...</td>
+</tr>
+<tr>
+<td><a href="SeverityValue/">SeverityValue</a></td>
+<td>describes the severity of a observable feature or fault</td>
+</tr>
+<tr>
+<td><a href="SocioeconomicAttribute/">SocioeconomicAttribute</a></td>
+<td>Attributes relating to a socioeconomic manifestation</td>
+</tr>
+<tr>
+<td><a href="SocioeconomicExposure/">SocioeconomicExposure</a></td>
+<td>A socioeconomic exposure is a factor relating to social and financial status ...</td>
+</tr>
+<tr>
+<td><a href="SocioeconomicOutcome/">SocioeconomicOutcome</a></td>
+<td>An general social or economic outcome, such as healthcare costs, utilization,...</td>
+</tr>
+<tr>
+<td><a href="SpecificityQuantifier/">SpecificityQuantifier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Study/">Study</a></td>
+<td>a detailed investigation and/or analysis</td>
+</tr>
+<tr>
+<td><a href="StudyPopulation/">StudyPopulation</a></td>
+<td>A group of individuals banded together as a group as participants in a resear...</td>
+</tr>
+<tr>
+<td><a href="StudyResult/">StudyResult</a></td>
+<td>A collection of data items from a study that are about a particular study sub...</td>
+</tr>
+<tr>
+<td><a href="StudyVariable/">StudyVariable</a></td>
+<td>a variable that is used as a measure in the investigation of a study</td>
+</tr>
+<tr>
+<td><a href="SubclassesMixin/">SubclassesMixin</a></td>
+<td>The functional operational product of a single class</td>
+</tr>
+<tr>
+<td><a href="SubjectOfInvestigation/">SubjectOfInvestigation</a></td>
+<td>An entity that has the role of being studied in an investigation, study, or e...</td>
+</tr>
+<tr>
+<td><a href="SystemAttribute/">SystemAttribute</a></td>
+<td>describes a characteristic of an system entity</td>
+</tr>
+<tr>
+<td><a href="SystemEntity/">SystemEntity</a></td>
+<td>A named entity that is either a part of a system, a whole system, population ...</td>
+</tr>
+<tr>
+<td><a href="SystemOperation/">SystemOperation</a></td>
+<td>A group that is composed of a chain of instructions and is produced by transl...</td>
+</tr>
+<tr>
+<td><a href="SystemOperationDomain/">SystemOperationDomain</a></td>
+<td>The domain the system operation belongs to</td>
+</tr>
+<tr>
+<td><a href="SystemTaxon/">SystemTaxon</a></td>
+<td>A classification of a set of systems</td>
+</tr>
+<tr>
+<td><a href="SystemTaxonToEntityAssociation/">SystemTaxonToEntityAssociation</a></td>
+<td>An association between an system taxon and another entity</td>
+</tr>
+<tr>
+<td><a href="SystemToSystemAssociation/">SystemToSystemAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="TangibleEssence/">TangibleEssence</a></td>
+<td>Semantic mixin concept</td>
+</tr>
+<tr>
+<td><a href="TangibleEssenceOrOccurrent/">TangibleEssenceOrOccurrent</a></td>
+<td>Either a physical or processual entity</td>
+</tr>
+<tr>
+<td><a href="TaxonToTaxonAssociation/">TaxonToTaxonAssociation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="TaxonomicRank/">TaxonomicRank</a></td>
+<td>A descriptor for the rank within a taxonomic classification</td>
+</tr>
+<tr>
+<td><a href="TerminationOutcome/">TerminationOutcome</a></td>
+<td>An outcome of termination from resulting from an exposure event</td>
+</tr>
+<tr>
+<td><a href="TextMiningResult/">TextMiningResult</a></td>
+<td>A result of text mining</td>
+</tr>
+<tr>
+<td><a href="ThingWithTaxon/">ThingWithTaxon</a></td>
+<td>A mixin that can be used on any entity that can be taxonomically classified</td>
+</tr>
+<tr>
+<td><a href="Workload/">Workload</a></td>
+<td>A workload is the sum of acquired material within a named thing</td>
+</tr>
+<tr>
+<td><a href="WorkloadBackgroundExposure/">WorkloadBackgroundExposure</a></td>
+<td>A workload background exposure is where an individual's specific workload bac...</td>
+</tr>
+<tr>
+<td><a href="WorkloadEntity/">WorkloadEntity</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="active_in/">active_in</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="actively_involved_in/">actively_involved_in</a></td>
+<td>holds between a continuant and a process or function, where the continuant ac...</td>
+</tr>
+<tr>
+<td><a href="actively_involves/">actively_involves</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="acts_upstream_of/">acts_upstream_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="acts_upstream_of_negative_effect/">acts_upstream_of_negative_effect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="acts_upstream_of_or_within/">acts_upstream_of_or_within</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="acts_upstream_of_or_within_negative_effect/">acts_upstream_of_or_within_negative_effect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="acts_upstream_of_or_within_positive_effect/">acts_upstream_of_or_within_positive_effect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="acts_upstream_of_positive_effect/">acts_upstream_of_positive_effect</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="address/">address</a></td>
+<td>the particulars of the place where someone or an organization is situated</td>
+</tr>
+<tr>
+<td><a href="adjusted_p_value/">adjusted_p_value</a></td>
+<td>The adjusted p-value is the probability of obtaining test results at least as...</td>
+</tr>
+<tr>
+<td><a href="administrative_operation_regulatory_status_world_wide/">administrative_operation_regulatory_status_world_wide</a></td>
+<td>An agglomeration of administrative operation regulatory status worldwide</td>
+</tr>
+<tr>
+<td><a href="adverse_event_of/">adverse_event_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="affected_by/">affected_by</a></td>
+<td>describes an entity of which the state or quality is affected by another exis...</td>
+</tr>
+<tr>
+<td><a href="affects/">affects</a></td>
+<td>describes an entity that has a direct affect on the state or quality of anoth...</td>
+</tr>
+<tr>
+<td><a href="affects_response_to/">affects_response_to</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="affects_risk_for/">affects_risk_for</a></td>
+<td>holds between two entities where exposure to one entity alters the chance of ...</td>
+</tr>
+<tr>
+<td><a href="affiliation/">affiliation</a></td>
+<td>a professional relationship between one provider (x) within another provider ...</td>
+</tr>
+<tr>
+<td><a href="age_in_years/">age_in_years</a></td>
+<td>Number of years since birth</td>
+</tr>
+<tr>
+<td><a href="aggregate_statistic/">aggregate_statistic</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="aggregator_knowledge_source/">aggregator_knowledge_source</a></td>
+<td>An intermediate aggregator resource from which knowledge expressed in an Asso...</td>
+</tr>
+<tr>
+<td><a href="ameliorates/">ameliorates</a></td>
+<td>A relationship between an entity (e</td>
+</tr>
+<tr>
+<td><a href="amount_or_activity_decreased_by/">amount_or_activity_decreased_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="amount_or_activity_increased_by/">amount_or_activity_increased_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="aspect_qualifier/">aspect_qualifier</a></td>
+<td>Composes with the core concept to describe new concepts of a different ontolo...</td>
+</tr>
+<tr>
+<td><a href="assesses/">assesses</a></td>
+<td>The effect of a thing on a target was interrogated in some assay</td>
+</tr>
+<tr>
+<td><a href="associated_environmental_context/">associated_environmental_context</a></td>
+<td>An attribute that can be applied to an association where the association hold...</td>
+</tr>
+<tr>
+<td><a href="associated_with/">associated_with</a></td>
+<td>Expresses a relationship between two named things where the relationship is t...</td>
+</tr>
+<tr>
+<td><a href="associated_with_decreased_likelihood_of/">associated_with_decreased_likelihood_of</a></td>
+<td>Expresses a relationship between two named things where the relationship is t...</td>
+</tr>
+<tr>
+<td><a href="associated_with_increased_likelihood_of/">associated_with_increased_likelihood_of</a></td>
+<td>Expresses a relationship between two named things where the relationship is t...</td>
+</tr>
+<tr>
+<td><a href="associated_with_likelihood_of/">associated_with_likelihood_of</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="associated_with_resistance_to/">associated_with_resistance_to</a></td>
+<td>A relation that holds between a named thing and a control that specifies that...</td>
+</tr>
+<tr>
+<td><a href="associated_with_sensitivity_to/">associated_with_sensitivity_to</a></td>
+<td>A relation that holds between a named thing and a control that specifies that...</td>
+</tr>
+<tr>
+<td><a href="association_slot/">association_slot</a></td>
+<td>any slot that relates an association to another entity</td>
+</tr>
+<tr>
+<td><a href="author/">author</a></td>
+<td>an instance of one (co-)creator primarily responsible for a written work</td>
+</tr>
+<tr>
+<td><a href="authors/">authors</a></td>
+<td>connects an publication to the list of authors who contributed to the publica...</td>
+</tr>
+<tr>
+<td><a href="available_from/">available_from</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="base_coordinate/">base_coordinate</a></td>
+<td>A position in the base coordinate system</td>
+</tr>
+<tr>
+<td><a href="binds/">binds</a></td>
+<td>A causal mechanism mediated by the direct contact between effector and target...</td>
+</tr>
+<tr>
+<td><a href="birth_date/">birth_date</a></td>
+<td>Date on which a person is born</td>
+</tr>
+<tr>
+<td><a href="bonferonni_adjusted_p_value/">bonferonni_adjusted_p_value</a></td>
+<td>The Bonferroni correction is an adjustment made to P values when several depe...</td>
+</tr>
+<tr>
+<td><a href="broad_match/">broad_match</a></td>
+<td>a list of terms from different schemas or terminology systems that have a bro...</td>
+</tr>
+<tr>
+<td><a href="broad_matches/">broad_matches</a></td>
+<td>A list of terms from different schemas or terminology systems that have a bro...</td>
+</tr>
+<tr>
+<td><a href="broad_synonym/">broad_synonym</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="capable_of/">capable_of</a></td>
+<td>holds between an entity and process or function, where the continuant alone h...</td>
+</tr>
+<tr>
+<td><a href="catalyst_qualifier/">catalyst_qualifier</a></td>
+<td>a qualifier that connects an association between two causally connected entit...</td>
+</tr>
+<tr>
+<td><a href="catalyzes/">catalyzes</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="category/">category</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="causal_mechanism_qualifier/">causal_mechanism_qualifier</a></td>
+<td>A statement qualifier representing a type of operational control mechanism th...</td>
+</tr>
+<tr>
+<td><a href="caused_by/">caused_by</a></td>
+<td>holds between two entities where the occurrence, existence, or activity of on...</td>
+</tr>
+<tr>
+<td><a href="causes/">causes</a></td>
+<td>holds between two entities where the occurrence, existence, or activity of on...</td>
+</tr>
+<tr>
+<td><a href="chapter/">chapter</a></td>
+<td>chapter of a book</td>
+</tr>
+<tr>
+<td><a href="chi_squared_statistic/">chi_squared_statistic</a></td>
+<td>represents the chi-squared statistic computed from observations</td>
+</tr>
+<tr>
+<td><a href="class_associated_with_condition/">class_associated_with_condition</a></td>
+<td>holds between a class and a fault or observable feature that the class or its...</td>
+</tr>
+<tr>
+<td><a href="close_match/">close_match</a></td>
+<td>a list of terms from different schemas or terminology systems that have a sem...</td>
+</tr>
+<tr>
+<td><a href="coexists_with/">coexists_with</a></td>
+<td>holds between two entities that are co-located in the same aggregate object, ...</td>
+</tr>
+<tr>
+<td><a href="coexpressed_with/">coexpressed_with</a></td>
+<td>holds between any two classes or subclasses, in which both are generally expr...</td>
+</tr>
+<tr>
+<td><a href="colocalizes_with/">colocalizes_with</a></td>
+<td>holds between two entities that are observed to be located in the same place</td>
+</tr>
+<tr>
+<td><a href="completed_by/">completed_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="composed_primarily_of/">composed_primarily_of</a></td>
+<td>x composed_primarily_of_y if:more than half of the mass of x is made from par...</td>
+</tr>
+<tr>
+<td><a href="computational_role_mixin/">computational_role_mixin</a></td>
+<td>A role played by the control entity or part thereof within a computational co...</td>
+</tr>
+<tr>
+<td><a href="concept_count_object/">concept_count_object</a></td>
+<td>The number of instances in a dataset/cohort whose records contain the concept...</td>
+</tr>
+<tr>
+<td><a href="concept_count_subject/">concept_count_subject</a></td>
+<td>The number of instances in a dataset/cohort whose records contain the concept...</td>
+</tr>
+<tr>
+<td><a href="concept_pair_count/">concept_pair_count</a></td>
+<td>The number of instances in a dataset/cohort whose records contain both the su...</td>
+</tr>
+<tr>
+<td><a href="condition_associated_with_class/">condition_associated_with_class</a></td>
+<td>holds between a class and a fault or observable feature that the class or its...</td>
+</tr>
+<tr>
+<td><a href="consumed_by/">consumed_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="consumes/">consumes</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="contains_process/">contains_process</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="context_qualifier/">context_qualifier</a></td>
+<td>Restricts the setting/context/location where the core concept (or qualified c...</td>
+</tr>
+<tr>
+<td><a href="contributes_to/">contributes_to</a></td>
+<td>holds between two entities where the occurrence, existence, or activity of on...</td>
+</tr>
+<tr>
+<td><a href="contribution_from/">contribution_from</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="contributor/">contributor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="control_role_mixin/">control_role_mixin</a></td>
+<td>A role played by the control entity or part thereof within a control context</td>
+</tr>
+<tr>
+<td><a href="correlated_with/">correlated_with</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="created_with/">created_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="creation_date/">creation_date</a></td>
+<td>date on which an entity was created</td>
+</tr>
+<tr>
+<td><a href="dataset_download_url/">dataset_download_url</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="decreased_amount_in/">decreased_amount_in</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="decreased_likelihood_associated_with/">decreased_likelihood_associated_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="decreases_amount_or_activity_of/">decreases_amount_or_activity_of</a></td>
+<td>A grouping mixin to help with searching for all the predicates that decrease ...</td>
+</tr>
+<tr>
+<td><a href="decreases_response_to/">decreases_response_to</a></td>
+<td>holds between two control entities where the action or effect of one decrease...</td>
+</tr>
+<tr>
+<td><a href="derivative_qualifier/">derivative_qualifier</a></td>
+<td>A qualifier that composes with a core subject/object  concept to describe som...</td>
+</tr>
+<tr>
+<td><a href="derives_from/">derives_from</a></td>
+<td>holds between two distinct material entities, the new entity and the old enti...</td>
+</tr>
+<tr>
+<td><a href="derives_into/">derives_into</a></td>
+<td>holds between two distinct entities, the old entity and the new entity, in wh...</td>
+</tr>
+<tr>
+<td><a href="description/">description</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="develops_from/">develops_from</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="develops_into/">develops_into</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="diagnoses/">diagnoses</a></td>
+<td>a relationship that identifies the nature of (an illness or other problem) by...</td>
+</tr>
+<tr>
+<td><a href="direction_qualifier/">direction_qualifier</a></td>
+<td>Composes with the core concept (+ aspect if provided) to describe a change in...</td>
+</tr>
+<tr>
+<td><a href="directly_interacts_with/">directly_interacts_with</a></td>
+<td>A causal mechanism mediated by a direct contact between the effector and targ...</td>
+</tr>
+<tr>
+<td><a href="disrupted_by/">disrupted_by</a></td>
+<td>describes a relationship where the structure, function, or occurrence of one ...</td>
+</tr>
+<tr>
+<td><a href="disrupts/">disrupts</a></td>
+<td>describes a relationship where one entity degrades or interferes with the str...</td>
+</tr>
+<tr>
+<td><a href="distribution_download_url/">distribution_download_url</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="download_url/">download_url</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="editor/">editor</a></td>
+<td>editor of a compiled work such as a book or a periodical (newspaper or an aca...</td>
+</tr>
+<tr>
+<td><a href="empirical_modifier_qualifier/">empirical_modifier_qualifier</a></td>
+<td>the method or process of administering a something to achieve an effect in a ...</td>
+</tr>
+<tr>
+<td><a href="enabled_by/">enabled_by</a></td>
+<td>holds between a process and an entity, where the entity executes the process</td>
+</tr>
+<tr>
+<td><a href="enables/">enables</a></td>
+<td>holds between an entity and a process, where the entity executes the process</td>
+</tr>
+<tr>
+<td><a href="end_coordinate/">end_coordinate</a></td>
+<td>The position at which the subject workload entity ends on the entity to which...</td>
+</tr>
+<tr>
+<td><a href="entries/">entries</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="evidence_count/">evidence_count</a></td>
+<td>The number of evidence instances that are connected to an association</td>
+</tr>
+<tr>
+<td><a href="exacerbates/">exacerbates</a></td>
+<td>A relationship between an entity (e</td>
+</tr>
+<tr>
+<td><a href="exact_match/">exact_match</a></td>
+<td>holds between two entities that have strictly equivalent meanings, with a hig...</td>
+</tr>
+<tr>
+<td><a href="exact_matches/">exact_matches</a></td>
+<td>A list of terms from different schemas or terminology systems that have an id...</td>
+</tr>
+<tr>
+<td><a href="exact_synonym/">exact_synonym</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="expected_count/">expected_count</a></td>
+<td>The expected (calculated) number of instances in a dataset/cohort whose recor...</td>
+</tr>
+<tr>
+<td><a href="expressed_in/">expressed_in</a></td>
+<td>holds between a class or subclasses and a deployment entity in which it is ex...</td>
+</tr>
+<tr>
+<td><a href="expresses/">expresses</a></td>
+<td>holds between an deployment entity and class or subclasses that is expressed ...</td>
+</tr>
+<tr>
+<td><a href="expression_site/">expression_site</a></td>
+<td>location in which named thing expression takes place</td>
+</tr>
+<tr>
+<td><a href="extraction_confidence_score/">extraction_confidence_score</a></td>
+<td>A quantitative confidence value that represents the probability of obtaining ...</td>
+</tr>
+<tr>
+<td><a href="fault_has_basis_in/">fault_has_basis_in</a></td>
+<td>A relation that holds between a fault and an entity where the state of the en...</td>
+</tr>
+<tr>
+<td><a href="fault_has_location/">fault_has_location</a></td>
+<td>A relationship between a fault and a deployment entity where the fault has on...</td>
+</tr>
+<tr>
+<td><a href="format/">format</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="frequency_qualifier/">frequency_qualifier</a></td>
+<td>a qualifier used in a observabile association to state how frequent the obser...</td>
+</tr>
+<tr>
+<td><a href="full_name/">full_name</a></td>
+<td>a long-form human readable name for a thing</td>
+</tr>
+<tr>
+<td><a href="has_active_component/">has_active_component</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_active_ingredient/">has_active_ingredient</a></td>
+<td>holds between a administrative operation and a named thing in which the latte...</td>
+</tr>
+<tr>
+<td><a href="has_administrative_operation/">has_administrative_operation</a></td>
+<td>connects an entity to one or more administrative operations</td>
+</tr>
+<tr>
+<td><a href="has_adverse_event/">has_adverse_event</a></td>
+<td>An untoward occurrence in an entity or empirical investigation subject that h...</td>
+</tr>
+<tr>
+<td><a href="has_attribute/">has_attribute</a></td>
+<td>connects any entity to an attribute</td>
+</tr>
+<tr>
+<td><a href="has_attribute_type/">has_attribute_type</a></td>
+<td>connects an attribute to a class that describes it</td>
+</tr>
+<tr>
+<td><a href="has_author/">has_author</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_capability/">has_capability</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_catalyst/">has_catalyst</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_class/">has_class</a></td>
+<td>connects an entity associated with one or more classes</td>
+</tr>
+<tr>
+<td><a href="has_class_or_subclasses/">has_class_or_subclasses</a></td>
+<td>connects an entity with one or more classes or subclasses</td>
+</tr>
+<tr>
+<td><a href="has_completed/">has_completed</a></td>
+<td>holds between an entity and a process that the entity is capable of and has c...</td>
+</tr>
+<tr>
+<td><a href="has_computational_sequence/">has_computational_sequence</a></td>
+<td>connects a workload feature to its sequence</td>
+</tr>
+<tr>
+<td><a href="has_confidence_level/">has_confidence_level</a></td>
+<td>connects an association to a qualitative term denoting the level of confidenc...</td>
+</tr>
+<tr>
+<td><a href="has_constituent/">has_constituent</a></td>
+<td>has smaller, self-contained part of technical entity consisting of components...</td>
+</tr>
+<tr>
+<td><a href="has_contributor/">has_contributor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_control_role/">has_control_role</a></td>
+<td>A role is particular behaviour which a control entity may exhibit</td>
+</tr>
+<tr>
+<td><a href="has_controller/">has_controller</a></td>
+<td>holds between two named things in which the second one is derived from the fi...</td>
+</tr>
+<tr>
+<td><a href="has_count/">has_count</a></td>
+<td>number of things with a particular property</td>
+</tr>
+<tr>
+<td><a href="has_dataset/">has_dataset</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_decreased_amount/">has_decreased_amount</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_device/">has_device</a></td>
+<td>connects an entity to one or more devices</td>
+</tr>
+<tr>
+<td><a href="has_distribution/">has_distribution</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_editor/">has_editor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_evidence/">has_evidence</a></td>
+<td>connects an association to an instance of supporting evidence</td>
+</tr>
+<tr>
+<td><a href="has_excipient/">has_excipient</a></td>
+<td>holds between a administrative operation and a named things in which the latt...</td>
+</tr>
+<tr>
+<td><a href="has_formula/">has_formula</a></td>
+<td>has equation using mathematical or scientific notation</td>
+</tr>
+<tr>
+<td><a href="has_homogeneity/">has_homogeneity</a></td>
+<td>is effectively homogenous</td>
+</tr>
+<tr>
+<td><a href="has_increased_amount/">has_increased_amount</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_input/">has_input</a></td>
+<td>holds between a process and a continuant, where the continuant is an input in...</td>
+</tr>
+<tr>
+<td><a href="has_manifestation/">has_manifestation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_marker/">has_marker</a></td>
+<td>holds between a fault or observable feature and a measurable operational enti...</td>
+</tr>
+<tr>
+<td><a href="has_member/">has_member</a></td>
+<td>Defines a mereological relation between a collection and an item</td>
+</tr>
+<tr>
+<td><a href="has_mode_of_inheritance/">has_mode_of_inheritance</a></td>
+<td>Relates a fault or observable feature to its observed inheritance classes</td>
+</tr>
+<tr>
+<td><a href="has_negative_upstream_actor/">has_negative_upstream_actor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_negative_upstream_or_within_actor/">has_negative_upstream_or_within_actor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_not_completed/">has_not_completed</a></td>
+<td>holds between an entity and a process that the entity is capable of, but has ...</td>
+</tr>
+<tr>
+<td><a href="has_numeric_value/">has_numeric_value</a></td>
+<td>connects a quantity value to a number</td>
+</tr>
+<tr>
+<td><a href="has_observation/">has_observation</a></td>
+<td>holds between a computational entity and a observable feature, where a observ...</td>
+</tr>
+<tr>
+<td><a href="has_operational_consequence/">has_operational_consequence</a></td>
+<td>connects an entity to a class describing the operational consequence</td>
+</tr>
+<tr>
+<td><a href="has_output/">has_output</a></td>
+<td>holds between a process and a continuant, where the continuant is an output o...</td>
+</tr>
+<tr>
+<td><a href="has_part/">has_part</a></td>
+<td>holds between wholes and their parts (entities or processes)</td>
+</tr>
+<tr>
+<td><a href="has_participant/">has_participant</a></td>
+<td>holds between a process and a continuant, where the continuant is somehow inv...</td>
+</tr>
+<tr>
+<td><a href="has_percentage/">has_percentage</a></td>
+<td>equivalent to has quotient multiplied by 100</td>
+</tr>
+<tr>
+<td><a href="has_platform/">has_platform</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_positive_upstream_actor/">has_positive_upstream_actor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_positive_upstream_or_within_actor/">has_positive_upstream_or_within_actor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_predisposing_factor/">has_predisposing_factor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_procedure/">has_procedure</a></td>
+<td>connects an entity to one or more procedures</td>
+</tr>
+<tr>
+<td><a href="has_provider/">has_provider</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_publisher/">has_publisher</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_qualitative_value/">has_qualitative_value</a></td>
+<td>connects an attribute to a value</td>
+</tr>
+<tr>
+<td><a href="has_quantitative_value/">has_quantitative_value</a></td>
+<td>connects an attribute to a value</td>
+</tr>
+<tr>
+<td><a href="has_quotient/">has_quotient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_receiver/">has_receiver</a></td>
+<td>the system or subsystem being exposed</td>
+</tr>
+<tr>
+<td><a href="has_route/">has_route</a></td>
+<td>the process that results in the stressor coming into direct contact with the ...</td>
+</tr>
+<tr>
+<td><a href="has_sequence_location/">has_sequence_location</a></td>
+<td>holds between two workload entities when the subject can be localized in sequ...</td>
+</tr>
+<tr>
+<td><a href="has_side_effect/">has_side_effect</a></td>
+<td>An unintended, but predictable, secondary effect shown to be correlated with ...</td>
+</tr>
+<tr>
+<td><a href="has_stressor/">has_stressor</a></td>
+<td>the process or entity that the receiver/receptor is being exposed to</td>
+</tr>
+<tr>
+<td><a href="has_subclasses/">has_subclasses</a></td>
+<td>holds between a class and a transcribed and/or translated child generated fro...</td>
+</tr>
+<tr>
+<td><a href="has_supporting_study_result/">has_supporting_study_result</a></td>
+<td>connects an association to an instance of supporting study result</td>
+</tr>
+<tr>
+<td><a href="has_target/">has_target</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_taxonomic_rank/">has_taxonomic_rank</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_topic/">has_topic</a></td>
+<td>Connects a node to a vocabulary term or ontology class that describes some as...</td>
+</tr>
+<tr>
+<td><a href="has_total/">has_total</a></td>
+<td>total number of things in a particular reference set</td>
+</tr>
+<tr>
+<td><a href="has_unit/">has_unit</a></td>
+<td>connects a quantity value to a unit</td>
+</tr>
+<tr>
+<td><a href="has_upstream_actor/">has_upstream_actor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_upstream_or_within_actor/">has_upstream_or_within_actor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_variant_part/">has_variant_part</a></td>
+<td>holds between a entity and a entity that is a subset of it</td>
+</tr>
+<tr>
+<td><a href="highest_regulator_approval_status/">highest_regulator_approval_status</a></td>
+<td>Should be the highest level of regulatory approval this control entity or dev...</td>
+</tr>
+<tr>
+<td><a href="homologous_to/">homologous_to</a></td>
+<td>holds between two named things with same relation, relative position, or stru...</td>
+</tr>
+<tr>
+<td><a href="id/">id</a></td>
+<td>A unique identifier for an entity</td>
+</tr>
+<tr>
+<td><a href="in_component_population_with/">in_component_population_with</a></td>
+<td>holds between two classes or subclasses that are expressed in the same compon...</td>
+</tr>
+<tr>
+<td><a href="in_pathway_with/">in_pathway_with</a></td>
+<td>holds between two named things that are part of in the same pathway</td>
+</tr>
+<tr>
+<td><a href="in_taxon/">in_taxon</a></td>
+<td>connects an entity to its taxonomic classification</td>
+</tr>
+<tr>
+<td><a href="increased_amount_of/">increased_amount_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="increased_likelihood_associated_with/">increased_likelihood_associated_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="increases_amount_or_activity_of/">increases_amount_or_activity_of</a></td>
+<td>A grouping mixin to help with searching for all the predicates that increase ...</td>
+</tr>
+<tr>
+<td><a href="increases_response_to/">increases_response_to</a></td>
+<td>holds between two control entities where the action or effect of one increase...</td>
+</tr>
+<tr>
+<td><a href="indirectly_interacts_with/">indirectly_interacts_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ingest_date/">ingest_date</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="inheritance_association/">inheritance_association</a></td>
+<td>Co-occurrence of a certain allele of a genetic marker and the phenotype of in...</td>
+</tr>
+<tr>
+<td><a href="interacting_operations_category/">interacting_operations_category</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="interacts_with/">interacts_with</a></td>
+<td>holds between any two entities that directly or indirectly interact with each...</td>
+</tr>
+<tr>
+<td><a href="iri/">iri</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="is_active_ingredient_of/">is_active_ingredient_of</a></td>
+<td>holds between a named thing and a administrative operation, in which the form...</td>
+</tr>
+<tr>
+<td><a href="is_ameliorated_by/">is_ameliorated_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_assessed_by/">is_assessed_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_controller/">is_controller</a></td>
+<td>indicates whether operational entity is a controller</td>
+</tr>
+<tr>
+<td><a href="is_controller_of/">is_controller_of</a></td>
+<td>holds between two operational entities in which the first one is derived from...</td>
+</tr>
+<tr>
+<td><a href="is_diagnosed_by/">is_diagnosed_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_exacerbated_by/">is_exacerbated_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_excipient_of/">is_excipient_of</a></td>
+<td>holds between a named thing and a administrative operation in which the forme...</td>
+</tr>
+<tr>
+<td><a href="is_input_of/">is_input_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_operational_consequence_of/">is_operational_consequence_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_output_of/">is_output_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_platform_of/">is_platform_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_side_effect_of/">is_side_effect_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="is_supplement/">is_supplement</a></td>
+<td>added to something else in order to complete or enhance it</td>
+</tr>
+<tr>
+<td><a href="is_toxic/">is_toxic</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="iso_abbreviation/">iso_abbreviation</a></td>
+<td>Standard abbreviation for periodicals in the International Organization for S...</td>
+</tr>
+<tr>
+<td><a href="issue/">issue</a></td>
+<td>issue of a newspaper, a scientific journal or magazine for reference purpose</td>
+</tr>
+<tr>
+<td><a href="keywords/">keywords</a></td>
+<td>keywords tagging a publication</td>
+</tr>
+<tr>
+<td><a href="knowledge_source/">knowledge_source</a></td>
+<td>An Information Resource from which the knowledge expressed in an Association ...</td>
+</tr>
+<tr>
+<td><a href="lacks_part/">lacks_part</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="latitude/">latitude</a></td>
+<td>latitude</td>
+</tr>
+<tr>
+<td><a href="lcsh_terms/">lcsh_terms</a></td>
+<td>Library of Congress Subject Headings (LCSH) terms tagging a publication</td>
+</tr>
+<tr>
+<td><a href="license/">license</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="likelihood_associated_with/">likelihood_associated_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ln_ratio/">ln_ratio</a></td>
+<td>the natural log of the ratio of co-occurrence to expected</td>
+</tr>
+<tr>
+<td><a href="ln_ratio_confidence_interval/">ln_ratio_confidence_interval</a></td>
+<td>The 99% confidence interval for the ln_ratio calculation (i</td>
+</tr>
+<tr>
+<td><a href="located_in/">located_in</a></td>
+<td>holds between a material entity and a material entity or site within which it...</td>
+</tr>
+<tr>
+<td><a href="location_of/">location_of</a></td>
+<td>holds between material entity or site and a material entity that is located w...</td>
+</tr>
+<tr>
+<td><a href="location_of_fault/">location_of_fault</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="logical_interpretation/">logical_interpretation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="longitude/">longitude</a></td>
+<td>longitude</td>
+</tr>
+<tr>
+<td><a href="manifestation_of/">manifestation_of</a></td>
+<td>that part of a phenomenon which is directly observable or visibly expressed, ...</td>
+</tr>
+<tr>
+<td><a href="marker_for/">marker_for</a></td>
+<td>holds between a measurable operational entity and a fault or observable featu...</td>
+</tr>
+<tr>
+<td><a href="mechanism_of_action/">mechanism_of_action</a></td>
+<td>a boolean flag to indicate if the edge is part of a path or subgraph of a kno...</td>
+</tr>
+<tr>
+<td><a href="member_of/">member_of</a></td>
+<td>Defines a mereological relation between a item and a collection</td>
+</tr>
+<tr>
+<td><a href="mentioned_by/">mentioned_by</a></td>
+<td>refers to is a relation between one named thing and the information content e...</td>
+</tr>
+<tr>
+<td><a href="mentions/">mentions</a></td>
+<td>refers to is a relation between one information content entity and the named ...</td>
+</tr>
+<tr>
+<td><a href="missing_from/">missing_from</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="mode_of_inheritance_of/">mode_of_inheritance_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="model_of/">model_of</a></td>
+<td>holds between a thing and some other thing it approximates for purposes of sc...</td>
+</tr>
+<tr>
+<td><a href="models/">models</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="name/">name</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="narrow_match/">narrow_match</a></td>
+<td>a list of terms from different schemas or terminology systems that have a nar...</td>
+</tr>
+<tr>
+<td><a href="narrow_matches/">narrow_matches</a></td>
+<td>A list of terms from different schemas or terminology systems that have a nar...</td>
+</tr>
+<tr>
+<td><a href="narrow_synonym/">narrow_synonym</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="negated/">negated</a></td>
+<td>if set to true, then the association is negated i</td>
+</tr>
+<tr>
+<td><a href="negatively_correlated_with/">negatively_correlated_with</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="node_property/">node_property</a></td>
+<td>A grouping for any property that holds between a node and a value</td>
+</tr>
+<tr>
+<td><a href="not_completed_by/">not_completed_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="object/">object</a></td>
+<td>connects an association to the object of the association</td>
+</tr>
+<tr>
+<td><a href="object_location_in_text/">object_location_in_text</a></td>
+<td>Character offsets for the text span(s) in the supporting text corresponding t...</td>
+</tr>
+<tr>
+<td><a href="observable_state/">observable_state</a></td>
+<td>in experiments (e</td>
+</tr>
+<tr>
+<td><a href="observation_of/">observation_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="occurs_in/">occurs_in</a></td>
+<td>holds between a process and an material entity or site within which the proce...</td>
+</tr>
+<tr>
+<td><a href="occurs_in_fault/">occurs_in_fault</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="occurs_together_in_literature_with/">occurs_together_in_literature_with</a></td>
+<td>holds between two entities where their co-occurrence is correlated by counts ...</td>
+</tr>
+<tr>
+<td><a href="onset_qualifier/">onset_qualifier</a></td>
+<td>a qualifier used in a observable association to state when the observable fea...</td>
+</tr>
+<tr>
+<td><a href="opposite_of/">opposite_of</a></td>
+<td>An opposite can be the other side of, reverse of, or something contrary to an...</td>
+</tr>
+<tr>
+<td><a href="original_object/">original_object</a></td>
+<td>used to hold the original object of a relation (or predicate) that an externa...</td>
+</tr>
+<tr>
+<td><a href="original_predicate/">original_predicate</a></td>
+<td>used to hold the original relation/predicate that an external knowledge sourc...</td>
+</tr>
+<tr>
+<td><a href="original_subject/">original_subject</a></td>
+<td>used to hold the original subject of a relation (or predicate) that an extern...</td>
+</tr>
+<tr>
+<td><a href="overlaps/">overlaps</a></td>
+<td>holds between entities that overlap in their extents (entities or processes)</td>
+</tr>
+<tr>
+<td><a href="p_value/">p_value</a></td>
+<td>A quantitative confidence value that represents the probability of obtaining ...</td>
+</tr>
+<tr>
+<td><a href="pages/">pages</a></td>
+<td>page number of source referenced for statement or publication</td>
+</tr>
+<tr>
+<td><a href="paralogous_to/">paralogous_to</a></td>
+<td>a homology relationship that holds between entities that diverged from a comm...</td>
+</tr>
+<tr>
+<td><a href="part_of/">part_of</a></td>
+<td>holds between parts and wholes (material entities or processes)</td>
+</tr>
+<tr>
+<td><a href="part_qualifier/">part_qualifier</a></td>
+<td>defines a specific part/component of the core concept (used in cases there th...</td>
+</tr>
+<tr>
+<td><a href="participates_in/">participates_in</a></td>
+<td>holds between a continuant and a process, where the continuant is somehow inv...</td>
+</tr>
+<tr>
+<td><a href="phase/">phase</a></td>
+<td>The phase for a named sequence entity</td>
+</tr>
+<tr>
+<td><a href="physically_interacts_with/">physically_interacts_with</a></td>
+<td>holds between two entities that make physical contact as part of some interac...</td>
+</tr>
+<tr>
+<td><a href="population_context_qualifier/">population_context_qualifier</a></td>
+<td>a population (general, study, cohort, etc</td>
+</tr>
+<tr>
+<td><a href="positively_correlated_with/">positively_correlated_with</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="preceded_by/">preceded_by</a></td>
+<td>holds between two processes, where the other is completed before the one begi...</td>
+</tr>
+<tr>
+<td><a href="precedes/">precedes</a></td>
+<td>holds between two processes, where one completes before the other begins</td>
+</tr>
+<tr>
+<td><a href="predicate/">predicate</a></td>
+<td>A high-level grouping for the relationship type</td>
+</tr>
+<tr>
+<td><a href="predisposes/">predisposes</a></td>
+<td>holds between two entities where exposure to one entity increases the chance ...</td>
+</tr>
+<tr>
+<td><a href="prevented_by/">prevented_by</a></td>
+<td>holds between a potential outcome of which the likelihood was reduced by the ...</td>
+</tr>
+<tr>
+<td><a href="prevents/">prevents</a></td>
+<td>holds between an entity whose application or use reduces the likelihood of a ...</td>
+</tr>
+<tr>
+<td><a href="primarily_composed_of/">primarily_composed_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="primary_knowledge_source/">primary_knowledge_source</a></td>
+<td>The most upstream source of the knowledge expressed in an Association that an...</td>
+</tr>
+<tr>
+<td><a href="primary_email/">primary_email</a></td>
+<td>The main email address of a person</td>
+</tr>
+<tr>
+<td><a href="produced_by/">produced_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="produces/">produces</a></td>
+<td>holds between a material entity and a product that is generated through the i...</td>
+</tr>
+<tr>
+<td><a href="provided_by/">provided_by</a></td>
+<td>The value in this node property represents the knowledge provider that create...</td>
+</tr>
+<tr>
+<td><a href="provider/">provider</a></td>
+<td>service, person, group, organization or project that provides a piece of info...</td>
+</tr>
+<tr>
+<td><a href="publications/">publications</a></td>
+<td>One or more publications that report the statement expressed in an Associatio...</td>
+</tr>
+<tr>
+<td><a href="published_in/">published_in</a></td>
+<td>CURIE identifier of a broader publication context within which the publicatio...</td>
+</tr>
+<tr>
+<td><a href="publisher/">publisher</a></td>
+<td>organization or person responsible for publishing books, periodicals, compone...</td>
+</tr>
+<tr>
+<td><a href="qualified_predicate/">qualified_predicate</a></td>
+<td>Predicate to be used in an association when subject and object qualifiers are...</td>
+</tr>
+<tr>
+<td><a href="qualifiers/">qualifiers</a></td>
+<td>connects an association to qualifiers that modify or qualify the meaning of t...</td>
+</tr>
+<tr>
+<td><a href="quantifier_qualifier/">quantifier_qualifier</a></td>
+<td>A measurable quantity for the object of the association</td>
+</tr>
+<tr>
+<td><a href="ratios/">ratios</a></td>
+<td>the relationship between relative quantities of substances, typically a ratio...</td>
+</tr>
+<tr>
+<td><a href="reaction_balanced/">reaction_balanced</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="reaction_direction/">reaction_direction</a></td>
+<td>the direction of a reaction as constrained by the direction enum (ie: left_to...</td>
+</tr>
+<tr>
+<td><a href="reaction_side/">reaction_side</a></td>
+<td>the side of a reaction being modeled (ie: left or right)</td>
+</tr>
+<tr>
+<td><a href="regulated_by/">regulated_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="regulates/">regulates</a></td>
+<td>A more specific form of affects, that implies the effect results from a compu...</td>
+</tr>
+<tr>
+<td><a href="regulator_adverse_event_level/">regulator_adverse_event_level</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="regulator_approval_status/">regulator_approval_status</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="related_condition/">related_condition</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="related_to/">related_to</a></td>
+<td>A relationship that is asserted between two named things</td>
+</tr>
+<tr>
+<td><a href="related_to_at_concept_level/">related_to_at_concept_level</a></td>
+<td>Represents a relationship held between terminology components that describe t...</td>
+</tr>
+<tr>
+<td><a href="related_to_at_instance_level/">related_to_at_instance_level</a></td>
+<td>Represents a relationship held between two instances of a data classes</td>
+</tr>
+<tr>
+<td><a href="related_synonym/">related_synonym</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="relative_frequency_object/">relative_frequency_object</a></td>
+<td>The frequency at which subject and object concepts co-occur in records within...</td>
+</tr>
+<tr>
+<td><a href="relative_frequency_object_confidence_interval/">relative_frequency_object_confidence_interval</a></td>
+<td>The 99% confidence interval for the relative_frequency_object calculation (i</td>
+</tr>
+<tr>
+<td><a href="relative_frequency_subject/">relative_frequency_subject</a></td>
+<td>The frequency at which subject and object concepts co-occur in records within...</td>
+</tr>
+<tr>
+<td><a href="relative_frequency_subject_confidence_interval/">relative_frequency_subject_confidence_interval</a></td>
+<td>The 99% confidence interval for the relative_frequency_subject calculation (i</td>
+</tr>
+<tr>
+<td><a href="replicated_from/">replicated_from</a></td>
+<td>x is replicated from y if and only if x is synthesized from template y</td>
+</tr>
+<tr>
+<td><a href="replicated_to/">replicated_to</a></td>
+<td>inverse of replicated from</td>
+</tr>
+<tr>
+<td><a href="resistance_associated_with/">resistance_associated_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="response_affected_by/">response_affected_by</a></td>
+<td>holds between two control entities where the susceptibility of a computationa...</td>
+</tr>
+<tr>
+<td><a href="response_decreased_by/">response_decreased_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="response_increased_by/">response_increased_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="retrieved_on/">retrieved_on</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="rights/">rights</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="risk_affected_by/">risk_affected_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="routes_of_delivery/">routes_of_delivery</a></td>
+<td>the method or process of administering a control mixture to have effect in a ...</td>
+</tr>
+<tr>
+<td><a href="same_as/">same_as</a></td>
+<td>holds between two entities that are considered equivalent to each other</td>
+</tr>
+<tr>
+<td><a href="sensitivity_associated_with/">sensitivity_associated_with</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="sequence_localization_attribute/">sequence_localization_attribute</a></td>
+<td>An attribute that can be applied to a workload sequence localization edge</td>
+</tr>
+<tr>
+<td><a href="sequence_location_of/">sequence_location_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="severity_qualifier/">severity_qualifier</a></td>
+<td>a qualifier used in a observable association to state how severe the observab...</td>
+</tr>
+<tr>
+<td><a href="sex_qualifier/">sex_qualifier</a></td>
+<td>a qualifier used in a entity association to state whether the association is ...</td>
+</tr>
+<tr>
+<td><a href="similar_to/">similar_to</a></td>
+<td>holds between an entity and some other entity with similar features</td>
+</tr>
+<tr>
+<td><a href="source_logo/">source_logo</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="source_web_page/">source_web_page</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="stage_qualifier/">stage_qualifier</a></td>
+<td>stage during which the class or entity expression of takes place</td>
+</tr>
+<tr>
+<td><a href="start_coordinate/">start_coordinate</a></td>
+<td>The position at which the subject workload entity starts on the entity to whi...</td>
+</tr>
+<tr>
+<td><a href="statement_qualifier/">statement_qualifier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="subclass_of/">subclass_of</a></td>
+<td>holds between two classes where the domain class is a specialization of the r...</td>
+</tr>
+<tr>
+<td><a href="subclasses_of/">subclasses_of</a></td>
+<td>definition x has subclasses of y if and only if y is a class (NCIT:C25346) th...</td>
+</tr>
+<tr>
+<td><a href="subject/">subject</a></td>
+<td>connects an association to the subject of the association</td>
+</tr>
+<tr>
+<td><a href="subject_location_in_text/">subject_location_in_text</a></td>
+<td>Character offsets for the text span(s) in the supporting text corresponding t...</td>
+</tr>
+<tr>
+<td><a href="summary/">summary</a></td>
+<td>executive  summary of a publication</td>
+</tr>
+<tr>
+<td><a href="superclass_of/">superclass_of</a></td>
+<td>holds between two classes where the domain class is a super class of the rang...</td>
+</tr>
+<tr>
+<td><a href="supporting_data_set/">supporting_data_set</a></td>
+<td>A set of data used as evidence to generate the knowledge expressed in an Asso...</td>
+</tr>
+<tr>
+<td><a href="supporting_data_source/">supporting_data_source</a></td>
+<td>An Information Resource from which data was retrieved and subsequently used a...</td>
+</tr>
+<tr>
+<td><a href="supporting_document_type/">supporting_document_type</a></td>
+<td>The document type (e</td>
+</tr>
+<tr>
+<td><a href="supporting_document_year/">supporting_document_year</a></td>
+<td>The document year (typically the publication year) for the supporting documen...</td>
+</tr>
+<tr>
+<td><a href="supporting_documents/">supporting_documents</a></td>
+<td>One or more referencable documents that report the statement expressed in an ...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_cohort/">supporting_study_cohort</a></td>
+<td>A description of a study population/cohort that was interrogated to provide e...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_context/">supporting_study_context</a></td>
+<td>A term or terms describing the experimental setting/context in which evidence...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_date_range/">supporting_study_date_range</a></td>
+<td>The date range over which data was collected in a study that provided evidenc...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_metadata/">supporting_study_metadata</a></td>
+<td>Information about a study used to generate information used as evidence to su...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_method_description/">supporting_study_method_description</a></td>
+<td>A uri or curie pointing to information about the methodology used to generate...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_method_type/">supporting_study_method_type</a></td>
+<td>A type of method that was applied in a study used to generate the information...</td>
+</tr>
+<tr>
+<td><a href="supporting_study_size/">supporting_study_size</a></td>
+<td>The sample size used in a study that provided evidence for the association (e</td>
+</tr>
+<tr>
+<td><a href="supporting_text/">supporting_text</a></td>
+<td>The segment of text from a document that supports the mined assertion</td>
+</tr>
+<tr>
+<td><a href="supporting_text_section_type/">supporting_text_section_type</a></td>
+<td>The section of the supporting text of a Text Mining Result within the support...</td>
+</tr>
+<tr>
+<td><a href="symbol/">symbol</a></td>
+<td>Symbol for a particular thing</td>
+</tr>
+<tr>
+<td><a href="synonym/">synonym</a></td>
+<td>Alternate human-readable names for a thing</td>
+</tr>
+<tr>
+<td><a href="systematic_synonym/">systematic_synonym</a></td>
+<td>most commonly used for classes</td>
+</tr>
+<tr>
+<td><a href="target_for/">target_for</a></td>
+<td>something or someone to be affected by an action or development</td>
+</tr>
+<tr>
+<td><a href="taxon_of/">taxon_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="temporal_context_qualifier/">temporal_context_qualifier</a></td>
+<td>a constraint of time placed upon the truth value of an association</td>
+</tr>
+<tr>
+<td><a href="temporal_interval_qualifier/">temporal_interval_qualifier</a></td>
+<td>a constraint of a time interval placed upon the truth value of an association</td>
+</tr>
+<tr>
+<td><a href="temporally_related_to/">temporally_related_to</a></td>
+<td>holds between two entities with a temporal relationship</td>
+</tr>
+<tr>
+<td><a href="timepoint/">timepoint</a></td>
+<td>a point in time</td>
+</tr>
+<tr>
+<td><a href="trade_name/">trade_name</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="translates_to/">translates_to</a></td>
+<td>x is the instantiatal translation of y (replica) if and only if a instantiato...</td>
+</tr>
+<tr>
+<td><a href="translation_of/">translation_of</a></td>
+<td>inverse of translates to</td>
+</tr>
+<tr>
+<td><a href="treated_by/">treated_by</a></td>
+<td>holds between a fault or observable feature and a therapeutic process or cont...</td>
+</tr>
+<tr>
+<td><a href="treats/">treats</a></td>
+<td>holds between a therapeutic procedure or control entity whose use increases t...</td>
+</tr>
+<tr>
+<td><a href="type/">type</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="update_date/">update_date</a></td>
+<td>date on which an entity was updated</td>
+</tr>
+<tr>
+<td><a href="variant_part_of/">variant_part_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="version/">version</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="version_of/">version_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="vital_status/">vital_status</a></td>
+<td>living or dead status</td>
+</tr>
+<tr>
+<td><a href="volume/">volume</a></td>
+<td>volume of a book or music release in a collection/series or a published colle...</td>
+</tr>
+<tr>
+<td><a href="xref/">xref</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ControllableClassCategoryEnum/">ControllableClassCategoryEnum</a></td>
+<td>Controllable classes</td>
+</tr>
+<tr>
+<td><a href="DeliveryEnum/">DeliveryEnum</a></td>
+<td>Delivery type</td>
+</tr>
+<tr>
+<td><a href="DirectionQualifierEnum/">DirectionQualifierEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LogicalInterpretationEnum/">LogicalInterpretationEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="PersonStatus/">PersonStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="PhaseEnum/">PhaseEnum</a></td>
+<td>Phase type</td>
+</tr>
+<tr>
+<td><a href="ReactionDirectionEnum/">ReactionDirectionEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ReactionSideEnum/">ReactionSideEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="RegulatorAdverseEventEnum/">RegulatorAdverseEventEnum</a></td>
+<td>please consult with the Regulator guidelines</td>
+</tr>
+<tr>
+<td><a href="RegulatorApprovalStatusEnum/">RegulatorApprovalStatusEnum</a></td>
+<td>Regulator appoval status types</td>
+</tr>
+<tr>
+<td><a href="RegulatorGuidelineEventEnum/">RegulatorGuidelineEventEnum</a></td>
+<td>"please consult with the Regulator guidelines as proposed in this document, h...</td>
+</tr>
+<tr>
+<td><a href="SequenceEnum/">SequenceEnum</a></td>
+<td>Sequence type</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="CategoryType/">CategoryType</a></td>
+<td>A primitive type in which the value denotes a class within the base model</td>
+</tr>
+<tr>
+<td><a href="ComputationalSequence/">ComputationalSequence</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="https://w3id.org/linkml/DateOrDatetime">linkml:DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="FormulaValue/">FormulaValue</a></td>
+<td>A formula</td>
+</tr>
+<tr>
+<td><a href="FrequencyValue/">FrequencyValue</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="IriType/">IriType</a></td>
+<td>An IRI</td>
+</tr>
+<tr>
+<td><a href="LabelType/">LabelType</a></td>
+<td>A string that provides a human-readable name for an entity</td>
+</tr>
+<tr>
+<td><a href="NarrativeText/">NarrativeText</a></td>
+<td>A string that provides a human-readable description of something</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="shex:nonLiteral">shex:nonLiteral</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="shex:iri">shex:iri</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="PercentageFrequencyValue/">PercentageFrequencyValue</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="PredicateType/">PredicateType</a></td>
+<td>A CURIE from the base related_to hierarchy</td>
+</tr>
+<tr>
+<td><a href="Quotient/">Quotient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="SymbolType/">SymbolType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="TimeType/">TimeType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Unit/">Unit</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ModelSystemDatabase/">ModelSystemDatabase</a></td>
+<td>Subset that is relevant for a typical System Model Database</td>
+</tr>
+<tr>
+<td><a href="Samples/">Samples</a></td>
+<td>Sample datamodel</td>
+</tr>
+<tr>
+<td><a href="TranslatorMinimal/">TranslatorMinimal</a></td>
+<td>Minimum subset of translator work</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

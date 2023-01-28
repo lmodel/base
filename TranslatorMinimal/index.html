@@ -1,0 +1,1189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/base/TranslatorMinimal/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Subset: TranslatorMinimal - base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#subset-translatorminimal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="base" class="md-header__button md-logo" aria-label="base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Subset: TranslatorMinimal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="base" class="md-nav__button md-logo" aria-label="base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/base" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    Identifier and Mapping Information
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    Schema Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-in-subset" class="md-nav__link">
+    Classes in subset
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes in subset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexoperationalmixture" class="md-nav__link">
+    ComplexOperationalMixture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlentity" class="md-nav__link">
+    ControlEntity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlmixture" class="md-nav__link">
+    ControlMixture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informationresource" class="md-nav__link">
+    InformationResource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operationalentity" class="md-nav__link">
+    OperationalEntity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operationalmixture" class="md-nav__link">
+    OperationalMixture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundancyentity" class="md-nav__link">
+    RedundancyEntity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workloadentity" class="md-nav__link">
+    WorkloadEntity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots-in-subset" class="md-nav__link">
+    Slots in subset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations-in-subset" class="md-nav__link">
+    Enumerations in subset
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/lmodel/base/edit/master/docs/TranslatorMinimal.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="subset-translatorminimal">Subset: TranslatorMinimal</h1>
+<p><em>Minimum subset of translator work</em></p>
+<p>URI: <a href="TranslatorMinimal">TranslatorMinimal</a></p>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/lmodel/base</li>
+</ul>
+<h2 id="classes-in-subset">Classes in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../ComplexOperationalMixture/">ComplexOperationalMixture</a></td>
+<td>A complex operational mixture is a control mixture composed of two or more op...</td>
+</tr>
+<tr>
+<td><a href="../ControlEntity/">ControlEntity</a></td>
+<td>A control entity is a entity that pertains to control or orchestration</td>
+</tr>
+<tr>
+<td><a href="../ControlMixture/">ControlMixture</a></td>
+<td>A control mixture is a control entity composed of two or more operational ent...</td>
+</tr>
+<tr>
+<td><a href="../InformationResource/">InformationResource</a></td>
+<td>A database or knowledgebase and its supporting ecosystem of interfaces and se...</td>
+</tr>
+<tr>
+<td><a href="../OperationalEntity/">OperationalEntity</a></td>
+<td>A operational entity is a control entity composed of individual or bonded ele...</td>
+</tr>
+<tr>
+<td><a href="../OperationalMixture/">OperationalMixture</a></td>
+<td>A operational mixture is a control mixture composed of two or more operationa...</td>
+</tr>
+<tr>
+<td><a href="../RedundancyEntity/">RedundancyEntity</a></td>
+<td>A redundancy entity is a operational entity</td>
+</tr>
+<tr>
+<td><a href="../WorkloadEntity/">WorkloadEntity</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="complexoperationalmixture">ComplexOperationalMixture</h3>
+<p>A complex operational mixture is a control mixture composed of two or more operational entities with unknown concentration</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="controlentity">ControlEntity</h3>
+<p>A control entity is a entity that pertains to control or orchestration</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="controlmixture">ControlMixture</h3>
+<p>A control mixture is a control entity composed of two or more operational entities.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="informationresource">InformationResource</h3>
+<p>A database or knowledgebase and its supporting ecosystem of interfaces and services that deliver content to consumers (e.g. web portals, APIs, query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operationalentity">OperationalEntity</h3>
+<p>A operational entity is a control entity composed of individual or bonded elements</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operationalmixture">OperationalMixture</h3>
+<p>A operational mixture is a control mixture composed of two or more operational entities with known concentration.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="redundancyentity">RedundancyEntity</h3>
+<p>A redundancy entity is a operational entity</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>1..* <br/> <a href="../CategoryType/">CategoryType</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="../NarrativeText/">NarrativeText</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A unique identifier for an entity <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../in_taxon/">in_taxon</a></td>
+<td>0..* <br/> <a href="../SystemTaxon/">SystemTaxon</a></td>
+<td>connects an entity to its taxonomic classification</td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>0..1 <br/> <a href="../IriType/">IriType</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../LabelType/">LabelType</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workloadentity">WorkloadEntity</h3>
+<p>None</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots-in-subset">Slots in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../actively_involved_in/">actively_involved_in</a></td>
+<td>holds between a continuant and a process or function, where the continuant ac...</td>
+</tr>
+<tr>
+<td><a href="../actively_involves/">actively_involves</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../affects/">affects</a></td>
+<td>describes an entity that has a direct affect on the state or quality of anoth...</td>
+</tr>
+<tr>
+<td><a href="../affects_response_to/">affects_response_to</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../affects_risk_for/">affects_risk_for</a></td>
+<td>holds between two entities where exposure to one entity alters the chance of ...</td>
+</tr>
+<tr>
+<td><a href="../broad_match/">broad_match</a></td>
+<td>a list of terms from different schemas or terminology systems that have a bro...</td>
+</tr>
+<tr>
+<td><a href="../capable_of/">capable_of</a></td>
+<td>holds between an entity and process or function, where the continuant alone h...</td>
+</tr>
+<tr>
+<td><a href="../category/">category</a></td>
+<td>Name of the high level ontology class in which this entity is categorized</td>
+</tr>
+<tr>
+<td><a href="../caused_by/">caused_by</a></td>
+<td>holds between two entities where the occurrence, existence, or activity of on...</td>
+</tr>
+<tr>
+<td><a href="../causes/">causes</a></td>
+<td>holds between two entities where the occurrence, existence, or activity of on...</td>
+</tr>
+<tr>
+<td><a href="../class_associated_with_condition/">class_associated_with_condition</a></td>
+<td>holds between a class and a fault or observable feature that the class or its...</td>
+</tr>
+<tr>
+<td><a href="../close_match/">close_match</a></td>
+<td>a list of terms from different schemas or terminology systems that have a sem...</td>
+</tr>
+<tr>
+<td><a href="../coexists_with/">coexists_with</a></td>
+<td>holds between two entities that are co-located in the same aggregate object, ...</td>
+</tr>
+<tr>
+<td><a href="../colocalizes_with/">colocalizes_with</a></td>
+<td>holds between two entities that are observed to be located in the same place</td>
+</tr>
+<tr>
+<td><a href="../composed_primarily_of/">composed_primarily_of</a></td>
+<td>x composed_primarily_of_y if:more than half of the mass of x is made from par...</td>
+</tr>
+<tr>
+<td><a href="../condition_associated_with_class/">condition_associated_with_class</a></td>
+<td>holds between a class and a fault or observable feature that the class or its...</td>
+</tr>
+<tr>
+<td><a href="../contributes_to/">contributes_to</a></td>
+<td>holds between two entities where the occurrence, existence, or activity of on...</td>
+</tr>
+<tr>
+<td><a href="../contribution_from/">contribution_from</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../correlated_with/">correlated_with</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="../decreases_response_to/">decreases_response_to</a></td>
+<td>holds between two control entities where the action or effect of one decrease...</td>
+</tr>
+<tr>
+<td><a href="../derives_from/">derives_from</a></td>
+<td>holds between two distinct material entities, the new entity and the old enti...</td>
+</tr>
+<tr>
+<td><a href="../derives_into/">derives_into</a></td>
+<td>holds between two distinct entities, the old entity and the new entity, in wh...</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>a human-readable description of an entity</td>
+</tr>
+<tr>
+<td><a href="../disrupts/">disrupts</a></td>
+<td>describes a relationship where one entity degrades or interferes with the str...</td>
+</tr>
+<tr>
+<td><a href="../enabled_by/">enabled_by</a></td>
+<td>holds between a process and an entity, where the entity executes the process</td>
+</tr>
+<tr>
+<td><a href="../enables/">enables</a></td>
+<td>holds between an entity and a process, where the entity executes the process</td>
+</tr>
+<tr>
+<td><a href="../exact_match/">exact_match</a></td>
+<td>holds between two entities that have strictly equivalent meanings, with a hig...</td>
+</tr>
+<tr>
+<td><a href="../expressed_in/">expressed_in</a></td>
+<td>holds between a class or subclasses and a deployment entity in which it is ex...</td>
+</tr>
+<tr>
+<td><a href="../expresses/">expresses</a></td>
+<td>holds between an deployment entity and class or subclasses that is expressed ...</td>
+</tr>
+<tr>
+<td><a href="../has_active_ingredient/">has_active_ingredient</a></td>
+<td>holds between a administrative operation and a named thing in which the latte...</td>
+</tr>
+<tr>
+<td><a href="../has_controller/">has_controller</a></td>
+<td>holds between two named things in which the second one is derived from the fi...</td>
+</tr>
+<tr>
+<td><a href="../has_excipient/">has_excipient</a></td>
+<td>holds between a administrative operation and a named things in which the latt...</td>
+</tr>
+<tr>
+<td><a href="../has_input/">has_input</a></td>
+<td>holds between a process and a continuant, where the continuant is an input in...</td>
+</tr>
+<tr>
+<td><a href="../has_marker/">has_marker</a></td>
+<td>holds between a fault or observable feature and a measurable operational enti...</td>
+</tr>
+<tr>
+<td><a href="../has_member/">has_member</a></td>
+<td>Defines a mereological relation between a collection and an item</td>
+</tr>
+<tr>
+<td><a href="../has_mode_of_inheritance/">has_mode_of_inheritance</a></td>
+<td>Relates a fault or observable feature to its observed inheritance classes</td>
+</tr>
+<tr>
+<td><a href="../has_observation/">has_observation</a></td>
+<td>holds between a computational entity and a observable feature, where a observ...</td>
+</tr>
+<tr>
+<td><a href="../has_output/">has_output</a></td>
+<td>holds between a process and a continuant, where the continuant is an output o...</td>
+</tr>
+<tr>
+<td><a href="../has_part/">has_part</a></td>
+<td>holds between wholes and their parts (entities or processes)</td>
+</tr>
+<tr>
+<td><a href="../has_participant/">has_participant</a></td>
+<td>holds between a process and a continuant, where the continuant is somehow inv...</td>
+</tr>
+<tr>
+<td><a href="../has_predisposing_factor/">has_predisposing_factor</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../has_subclasses/">has_subclasses</a></td>
+<td>holds between a class and a transcribed and/or translated child generated fro...</td>
+</tr>
+<tr>
+<td><a href="../homologous_to/">homologous_to</a></td>
+<td>holds between two named things with same relation, relative position, or stru...</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>A unique identifier for an entity</td>
+</tr>
+<tr>
+<td><a href="../in_component_population_with/">in_component_population_with</a></td>
+<td>holds between two classes or subclasses that are expressed in the same compon...</td>
+</tr>
+<tr>
+<td><a href="../in_pathway_with/">in_pathway_with</a></td>
+<td>holds between two named things that are part of in the same pathway</td>
+</tr>
+<tr>
+<td><a href="../in_taxon/">in_taxon</a></td>
+<td>connects an entity to its taxonomic classification</td>
+</tr>
+<tr>
+<td><a href="../increases_response_to/">increases_response_to</a></td>
+<td>holds between two control entities where the action or effect of one increase...</td>
+</tr>
+<tr>
+<td><a href="../interacts_with/">interacts_with</a></td>
+<td>holds between any two entities that directly or indirectly interact with each...</td>
+</tr>
+<tr>
+<td><a href="../iri/">iri</a></td>
+<td>An IRI for an entity</td>
+</tr>
+<tr>
+<td><a href="../is_active_ingredient_of/">is_active_ingredient_of</a></td>
+<td>holds between a named thing and a administrative operation, in which the form...</td>
+</tr>
+<tr>
+<td><a href="../is_controller_of/">is_controller_of</a></td>
+<td>holds between two operational entities in which the first one is derived from...</td>
+</tr>
+<tr>
+<td><a href="../is_exacerbated_by/">is_exacerbated_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../is_excipient_of/">is_excipient_of</a></td>
+<td>holds between a named thing and a administrative operation in which the forme...</td>
+</tr>
+<tr>
+<td><a href="../is_input_of/">is_input_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../is_output_of/">is_output_of</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../located_in/">located_in</a></td>
+<td>holds between a material entity and a material entity or site within which it...</td>
+</tr>
+<tr>
+<td><a href="../location_of/">location_of</a></td>
+<td>holds between material entity or site and a material entity that is located w...</td>
+</tr>
+<tr>
+<td><a href="../manifestation_of/">manifestation_of</a></td>
+<td>that part of a phenomenon which is directly observable or visibly expressed, ...</td>
+</tr>
+<tr>
+<td><a href="../marker_for/">marker_for</a></td>
+<td>holds between a measurable operational entity and a fault or observable featu...</td>
+</tr>
+<tr>
+<td><a href="../member_of/">member_of</a></td>
+<td>Defines a mereological relation between a item and a collection</td>
+</tr>
+<tr>
+<td><a href="../model_of/">model_of</a></td>
+<td>holds between a thing and some other thing it approximates for purposes of sc...</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>A human-readable name for an attribute or entity</td>
+</tr>
+<tr>
+<td><a href="../narrow_match/">narrow_match</a></td>
+<td>a list of terms from different schemas or terminology systems that have a nar...</td>
+</tr>
+<tr>
+<td><a href="../negatively_correlated_with/">negatively_correlated_with</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="../occurs_in/">occurs_in</a></td>
+<td>holds between a process and an material entity or site within which the proce...</td>
+</tr>
+<tr>
+<td><a href="../occurs_together_in_literature_with/">occurs_together_in_literature_with</a></td>
+<td>holds between two entities where their co-occurrence is correlated by counts ...</td>
+</tr>
+<tr>
+<td><a href="../overlaps/">overlaps</a></td>
+<td>holds between entities that overlap in their extents (entities or processes)</td>
+</tr>
+<tr>
+<td><a href="../paralogous_to/">paralogous_to</a></td>
+<td>a homology relationship that holds between entities that diverged from a comm...</td>
+</tr>
+<tr>
+<td><a href="../part_of/">part_of</a></td>
+<td>holds between parts and wholes (material entities or processes)</td>
+</tr>
+<tr>
+<td><a href="../participates_in/">participates_in</a></td>
+<td>holds between a continuant and a process, where the continuant is somehow inv...</td>
+</tr>
+<tr>
+<td><a href="../physically_interacts_with/">physically_interacts_with</a></td>
+<td>holds between two entities that make physical contact as part of some interac...</td>
+</tr>
+<tr>
+<td><a href="../positively_correlated_with/">positively_correlated_with</a></td>
+<td>A relationship that holds between two concepts represented by variables for w...</td>
+</tr>
+<tr>
+<td><a href="../preceded_by/">preceded_by</a></td>
+<td>holds between two processes, where the other is completed before the one begi...</td>
+</tr>
+<tr>
+<td><a href="../precedes/">precedes</a></td>
+<td>holds between two processes, where one completes before the other begins</td>
+</tr>
+<tr>
+<td><a href="../predisposes/">predisposes</a></td>
+<td>holds between two entities where exposure to one entity increases the chance ...</td>
+</tr>
+<tr>
+<td><a href="../prevents/">prevents</a></td>
+<td>holds between an entity whose application or use reduces the likelihood of a ...</td>
+</tr>
+<tr>
+<td><a href="../produces/">produces</a></td>
+<td>holds between a material entity and a product that is generated through the i...</td>
+</tr>
+<tr>
+<td><a href="../response_affected_by/">response_affected_by</a></td>
+<td>holds between two control entities where the susceptibility of a computationa...</td>
+</tr>
+<tr>
+<td><a href="../response_decreased_by/">response_decreased_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../response_increased_by/">response_increased_by</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../same_as/">same_as</a></td>
+<td>holds between two entities that are considered equivalent to each other</td>
+</tr>
+<tr>
+<td><a href="../similar_to/">similar_to</a></td>
+<td>holds between an entity and some other entity with similar features</td>
+</tr>
+<tr>
+<td><a href="../subclass_of/">subclass_of</a></td>
+<td>holds between two classes where the domain class is a specialization of the r...</td>
+</tr>
+<tr>
+<td><a href="../subclasses_of/">subclasses_of</a></td>
+<td>definition x has subclasses of y if and only if y is a class (NCIT:C25346) th...</td>
+</tr>
+<tr>
+<td><a href="../superclass_of/">superclass_of</a></td>
+<td>holds between two classes where the domain class is a super class of the rang...</td>
+</tr>
+<tr>
+<td><a href="../synonym/">synonym</a></td>
+<td>Alternate human-readable names for a thing</td>
+</tr>
+<tr>
+<td><a href="../treated_by/">treated_by</a></td>
+<td>holds between a fault or observable feature and a therapeutic process or cont...</td>
+</tr>
+<tr>
+<td><a href="../treats/">treats</a></td>
+<td>holds between a therapeutic procedure or control entity whose use increases t...</td>
+</tr>
+<tr>
+<td><a href="../xref/">xref</a></td>
+<td>Alternate CURIEs for a thing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations-in-subset">Enumerations in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
