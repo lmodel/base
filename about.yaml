@@ -1,0 +1,6 @@
+name: base
+author: Noel McLoughlin <noel.mcloughlin@gmail.com>
+description: Entity and association taxonomy and datamodel for named thing abstractions
+source_schema_path: src/base/schema/base.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums

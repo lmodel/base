@@ -1,0 +1,2807 @@
+type Activity implements ActivityAndBehavior
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+interface ActivityAndBehavior
+  {
+  }
+
+interface AdministrativeEntity
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type AdministrativeOperation implements ControlOrAdministrativeOperationOrRestoration, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isSupplement: ControlMixture
+    highestRegulatorApprovalStatus: String
+    administrativeOperationRegulatoryStatusWorldWide: String
+    routesOfDelivery: [DeliveryEnum]
+  }
+
+type AdministrativeOperationExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    hasQuantitativeValue: [QuantityValue]
+    timepoint: TimeType
+  }
+
+type AdministrativeOperationToClassAssociation implements AdministrativeOperationToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    object: ClassOrSubclasses!
+  }
+
+interface AdministrativeOperationToEntityAssociationMixin
+  {
+    subject: AdministrativeOperation!
+  }
+
+type Agent
+  {
+    iri: IriType
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    affiliation: [Uriorcurie]
+    address: String
+    id: String!
+    name: LabelType
+  }
+
+interface Annotation
+  {
+  }
+
+type Article
+  {
+    iri: IriType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    authors: [String]
+    pages: [String]
+    summary: String
+    keywords: [String]
+    lcshTerms: [Uriorcurie]
+    xref: [Uriorcurie]
+    id: String!
+    name: LabelType
+    type: String!
+    publishedIn: Uriorcurie!
+    isoAbbreviation: String
+    volume: String
+    issue: String
+  }
+
+type AssemblyComplex implements AssemblyMixin
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+interface AssemblyMixin
+  {
+    name: SymbolType
+  }
+
+type AssemblyToComponentAssociation implements AssemblyToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: AssemblyMixin!
+    object: Component!
+  }
+
+type AssemblyToComputationalProcessAssociation implements AssemblyToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: AssemblyMixin!
+    object: ComputationalProcess!
+  }
+
+interface AssemblyToEntityAssociationMixin
+  {
+    subject: NamedThing!
+  }
+
+type AssemblyToOperationalActivityAssociation implements AssemblyToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: AssemblyMixin!
+    object: OperationalActivity!
+  }
+
+type Association
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+  }
+
+type Attribute implements OntologyClass
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type Behavior implements OntologyClass, ActivityAndBehavior
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasInput: [ComputationalProcessOrActivity]
+    hasOutput: [ComputationalProcessOrActivity]
+    enabledBy: [SystemEntity]
+  }
+
+type BehaviorToBehavioralFeatureAssociation implements EntityToObservableFeatureAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: Behavior!
+    object: BehavioralFeature!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+  }
+
+type BehavioralExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    timepoint: TimeType
+  }
+
+type BehavioralFeature
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+type BehavioralOutcome implements Outcome
+  {
+  }
+
+type BiologicalSex
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type Book
+  {
+    iri: IriType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    authors: [String]
+    pages: [String]
+    summary: String
+    keywords: [String]
+    lcshTerms: [Uriorcurie]
+    xref: [Uriorcurie]
+    name: LabelType
+    id: String!
+    type: String!
+  }
+
+type BookChapter
+  {
+    iri: IriType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    authors: [String]
+    pages: [String]
+    summary: String
+    keywords: [String]
+    lcshTerms: [Uriorcurie]
+    xref: [Uriorcurie]
+    id: String!
+    name: LabelType
+    type: String!
+    publishedIn: Uriorcurie!
+    volume: String
+    chapter: String
+  }
+
+type Case implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+interface CaseToEntityAssociationMixin
+  {
+    subject: Case!
+  }
+
+type CaseToObservableFeatureAssociation implements EntityToObservableFeatureAssociationMixin, CaseToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+  }
+
+type ChiSquaredAnalysisResult
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type Class implements ClassOrSubclasses, WorkloadEntity, ControlEntityOrClassOrSubclasses, TangibleEssence, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    symbol: String
+    synonym: [LabelType]
+    xref: [Uriorcurie]
+    hasComputationalSequence: ComputationalSequence
+  }
+
+interface ClassGroupingMixin
+  {
+    hasClassOrSubclasses: [Class]
+  }
+
+interface ClassOrSubclasses
+  {
+    name: SymbolType
+  }
+
+interface ClassToClassAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ClassOrSubclasses!
+    object: ClassOrSubclasses!
+  }
+
+interface ClassToEntityAssociationMixin
+  {
+    subject: ClassOrSubclasses!
+  }
+
+type ClassToExpressionSiteAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    stageQualifier: LifecycleStage
+    quantifierQualifier: OntologyClass
+    subject: ClassOrSubclasses!
+    object: DeploymentEntity!
+    predicate: PredicateType!
+  }
+
+type ClassToFaultAssociation implements EntityToFaultAssociationMixin, ClassToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ClassOrSubclasses!
+    object: Fault!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+  }
+
+type ClassToObservableFeatureAssociation implements EntityToObservableFeatureAssociationMixin, ClassToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ClassOrSubclasses!
+    object: ObservableFeature!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+  }
+
+type ClassToPathwayAssociation implements ClassToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ClassOrSubclasses!
+    object: Pathway!
+  }
+
+type Cohort implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type CommonDataElement
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type ComplexOperationalMixture
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isSupplement: ControlMixture
+    highestRegulatorApprovalStatus: String
+    administrativeOperationRegulatoryStatusWorldWide: String
+    routesOfDelivery: [DeliveryEnum]
+  }
+
+type Component
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type ComponentSystem implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type ComponentType implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+interface ComponentTypeToEntityAssociationMixin
+  {
+    subject: ComponentType!
+  }
+
+type ComputationalEntity implements ThingWithTaxon
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+type ComputationalProcess implements Occurrent, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasInput: [ComputationalProcessOrActivity]
+    hasOutput: [ComputationalProcessOrActivity]
+    enabledBy: [SystemEntity]
+  }
+
+type ComputationalProcessOrActivity implements Occurrent, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasInput: [ComputationalProcessOrActivity]
+    hasOutput: [ComputationalProcessOrActivity]
+    enabledBy: [SystemEntity]
+  }
+
+type ConfidenceLevel
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type ContributorAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: InformationContentEntity!
+    predicate: PredicateType!
+    object: Agent!
+    qualifiers: [OntologyClass]
+  }
+
+type ControlEntity implements TangibleEssence, ControlOrAdministrativeOperationOrRestoration, ControlEntityOrClassOrSubclasses, ControlEntityOrSystemOperation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+  }
+
+type ControlEntityAssessesNamedThingAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ControlEntity!
+    object: NamedThing!
+    predicate: PredicateType!
+  }
+
+interface ControlEntityOrClassOrSubclasses
+  {
+  }
+
+interface ControlEntityOrSystemOperation
+  {
+  }
+
+interface ControlEntityToEntityAssociationMixin
+  {
+    subject: ControlEntityOrClassOrSubclasses!
+  }
+
+type ControlExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    hasQuantitativeValue: [QuantityValue]
+    timepoint: TimeType
+  }
+
+type ControlMixture
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isSupplement: ControlMixture
+    highestRegulatorApprovalStatus: String
+    administrativeOperationRegulatoryStatusWorldWide: String
+    routesOfDelivery: [DeliveryEnum]
+  }
+
+interface ControlOrAdministrativeOperationOrRestoration
+  {
+  }
+
+type ControlRole
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type ControlToControlAssociation implements ControlToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    object: ControlEntity!
+  }
+
+interface ControlToEntityAssociationMixin
+  {
+    subject: ControlEntityOrClassOrSubclasses!
+  }
+
+type ControlToFaultOrObservableFeatureAssociation implements ControlToEntityAssociationMixin, EntityToFaultOrObservableFeatureAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    object: FaultOrObservableFeature!
+  }
+
+type ControlToPathwayAssociation implements ControlToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ControlEntity!
+    object: Pathway!
+  }
+
+type ControllableClassToFaultAssociation implements EntityToFaultAssociationMixin, ClassToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    object: Fault!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    subject: ClassOrSubclasses!
+    predicate: PredicateType!
+    hasEvidence: [ControllableClassCategoryEnum]
+  }
+
+type Dataset
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type DatasetDistribution
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    distributionDownloadUrl: String
+  }
+
+type DatasetSummary
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    sourceWebPage: String
+    sourceLogo: String
+  }
+
+type DatasetVersion
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    hasDataset: Dataset
+    ingestDate: String
+    hasDistribution: DatasetDistribution
+  }
+
+type DeploymentEntity implements TangibleEssence
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type Device
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type EmpiricalAttribute
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type EmpiricalCourse
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type EmpiricalEntity
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type EmpiricalFinding
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [EmpiricalAttribute]
+  }
+
+type EmpiricalIntervention
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type EmpiricalMeasurement
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    hasAttributeType: OntologyClass!
+  }
+
+type EmpiricalModifier
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+interface Entity
+  {
+    id: String!
+    iri: IriType
+    category: [CategoryType]
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+  }
+
+interface EntityToExposureEventAssociationMixin
+  {
+    object: ExposureEvent!
+  }
+
+type EntityToFaultAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    regulatorApprovalStatus: RegulatorApprovalStatusEnum
+  }
+
+interface EntityToFaultAssociationMixin
+  {
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    object: Fault!
+  }
+
+interface EntityToFaultOrObservableFeatureAssociationMixin
+  {
+    object: FaultOrObservableFeature!
+  }
+
+interface EntityToFeatureOrFaultQualifiersMixin
+  {
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+  }
+
+type EntityToObservableFeatureAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    regulatorApprovalStatus: RegulatorApprovalStatusEnum
+  }
+
+interface EntityToObservableFeatureAssociationMixin
+  {
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+    object: ObservableFeature!
+  }
+
+interface EntityToOutcomeAssociationMixin
+  {
+    object: Outcome!
+  }
+
+type EnvironmentalExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    timepoint: TimeType
+  }
+
+type EnvironmentalFeature
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type EnvironmentalProcess implements Occurrent
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type EpidemiologicalOutcome implements Outcome
+  {
+  }
+
+type Event
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type EvidenceType
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+interface ExposureEvent
+  {
+    id: String!
+    timepoint: TimeType
+  }
+
+type ExposureEventToObservableFeatureAssociation implements EntityToObservableFeatureAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: ExposureEvent!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+  }
+
+type ExposureEventToOutcomeAssociation implements EntityToOutcomeAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    populationContextQualifier: PopulationOfIndividualSystems
+    temporalContextQualifier: TimeType
+  }
+
+type Fault
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+type FaultOrObservableFeature
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+type FaultOrObservableFeatureExposure implements ExposureEvent, FaultyEntityMixin
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    timepoint: TimeType
+  }
+
+type FaultOrObservableFeatureOutcome implements Outcome
+  {
+  }
+
+interface FaultOrObservableFeatureToEntityAssociationMixin
+  {
+    subject: FaultOrObservableFeature!
+  }
+
+type FaultOrObservableFeatureToLocationAssociation implements FaultOrObservableFeatureToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    object: DeploymentEntity!
+  }
+
+interface FaultToEntityAssociationMixin
+  {
+    subject: Fault!
+  }
+
+type FaultToExposureEventAssociation implements FaultToEntityAssociationMixin, EntityToExposureEventAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+  }
+
+type FaultToObservableFeatureAssociation implements EntityToObservableFeatureAssociationMixin, FaultToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: Fault!
+    object: ObservableFeature!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+  }
+
+type FaultyDeploymentExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    timepoint: TimeType
+  }
+
+type FaultyDeploymentOutcome implements Outcome
+  {
+  }
+
+type FaultyDeploymentStructure implements FaultyEntityMixin
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+interface FaultyEntityMixin
+  {
+  }
+
+type FaultyProcess implements FaultyEntityMixin
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasInput: [ComputationalProcessOrActivity]
+    hasOutput: [ComputationalProcessOrActivity]
+    enabledBy: [SystemEntity]
+  }
+
+type FaultyProcessExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    timepoint: TimeType
+  }
+
+type FaultyProcessOutcome implements Outcome
+  {
+  }
+
+interface FrequencyQualifierMixin
+  {
+    frequencyQualifier: FrequencyValue
+  }
+
+interface FrequencyQuantifier
+  {
+    hasCount: Integer
+    hasTotal: Integer
+    hasQuotient: Double
+    hasPercentage: Double
+  }
+
+type FunctionalAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: AssemblyMixin!
+    object: OntologyClass!
+  }
+
+type GeographicExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    timepoint: TimeType
+  }
+
+type GeographicLocation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    latitude: Float
+    longitude: Float
+  }
+
+type GeographicLocationAtTime
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    latitude: Float
+    longitude: Float
+    timepoint: TimeType
+  }
+
+type Homogeneity
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type IndividualSystem implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+interface InformationContentEntity
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type InformationContentEntityToNamedThingAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: NamedThing!
+    object: NamedThing!
+    predicate: PredicateType!
+  }
+
+type InformationResource
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type Inheritance
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+type LifecycleStage
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type MaterialSample implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type NamedSequence
+  {
+    hasComputationalSequence: ComputationalSequence
+  }
+
+type NamedThing
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type NamedThing
+  {
+    id: String!
+    name: LabelType
+    description: NarrativeText
+  }
+
+type ObservableFeature
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+  }
+
+type ObservableQuality
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+interface Occurrent
+  {
+  }
+
+type OfflineMaintenance
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type OfflineMaintenanceOutcome implements Outcome
+  {
+  }
+
+type Onset
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+interface OntologyClass
+  {
+    id: String!
+  }
+
+type OperationalActivity implements Occurrent, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasInput: [OperationalEntity]
+    hasOutput: [OperationalEntity]
+    enabledBy: [AssemblyMixin]
+  }
+
+type OperationalActivityToPathwayAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: OperationalActivity!
+    object: Pathway!
+    predicate: PredicateType!
+  }
+
+type OperationalEntity
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isController: Boolean
+  }
+
+type OperationalMixture
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isSupplement: ControlMixture
+    highestRegulatorApprovalStatus: String
+    administrativeOperationRegulatoryStatusWorldWide: String
+    routesOfDelivery: [DeliveryEnum]
+  }
+
+interface Outcome
+  {
+  }
+
+type Pathway implements OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasInput: [ComputationalProcessOrActivity]
+    hasOutput: [ComputationalProcessOrActivity]
+    enabledBy: [SystemEntity]
+  }
+
+type Person
+  {
+    id: String!
+    name: LabelType
+    description: NarrativeText
+    primaryEmail: String
+    birthDate: Date
+    ageInYears: Integer
+    vitalStatus: PersonStatus
+  }
+
+type PersonCollection
+  {
+    entries: [Person]
+  }
+
+type Phenomenon implements Occurrent
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type PhysicalEntity implements TangibleEssence
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type PlanetaryEntity
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type PopulationOfIndividualSystems implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type PopulationToPopulationAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: PopulationOfIndividualSystems!
+    object: PopulationOfIndividualSystems!
+    predicate: PredicateType!
+  }
+
+type Procedure implements ActivityAndBehavior
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+  }
+
+type ProcessedMaterial
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isSupplement: ControlMixture
+    highestRegulatorApprovalStatus: String
+    administrativeOperationRegulatoryStatusWorldWide: String
+    routesOfDelivery: [DeliveryEnum]
+  }
+
+type Publication
+  {
+    iri: IriType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    authors: [String]
+    pages: [String]
+    summary: String
+    keywords: [String]
+    lcshTerms: [Uriorcurie]
+    xref: [Uriorcurie]
+    id: String!
+    name: LabelType
+    type: String!
+  }
+
+type QuantityValue
+  {
+    hasUnit: Unit
+    hasNumericValue: Double
+  }
+
+type ReactionToCatalystAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    ratios: Integer
+    reactionDirection: ReactionDirectionEnum
+    reactionSide: ReactionSideEnum
+    subject: OperationalEntity!
+    object: ClassOrSubclasses!
+  }
+
+type ReactionToParticipantAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    object: ControlEntity!
+    ratios: Integer
+    reactionDirection: ReactionDirectionEnum
+    reactionSide: ReactionSideEnum
+    subject: OperationalEntity!
+  }
+
+type RedundancyEntity implements WorkloadEntity, ThingWithTaxon, TangibleEssence, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isController: Boolean
+    hasComputationalSequence: ComputationalSequence
+    inTaxon: [SystemTaxon]
+  }
+
+interface RelationshipQuantifier
+  {
+  }
+
+type RelationshipType
+  {
+    id: String!
+  }
+
+type Replica
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    tradeName: ControlEntity
+    availableFrom: [NamedThing]
+    isToxic: Boolean
+    hasControlRole: [ControlRole]
+    isController: Boolean
+    hasComputationalSequence: ComputationalSequence
+    inTaxon: [SystemTaxon]
+  }
+
+type Restoration implements ExposureEvent, ControlOrAdministrativeOperationOrRestoration
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    hasAdministrativeOperation: [AdministrativeOperation]
+    hasDevice: [Device]
+    hasProcedure: [Procedure]
+    timepoint: TimeType
+  }
+
+interface SensitivityQuantifier
+  {
+  }
+
+type Serial
+  {
+    iri: IriType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+    authors: [String]
+    pages: [String]
+    summary: String
+    keywords: [String]
+    lcshTerms: [Uriorcurie]
+    xref: [Uriorcurie]
+    name: LabelType
+    isoAbbreviation: String
+    volume: String
+    issue: String
+    id: String!
+    type: String!
+  }
+
+type ServiceType implements TangibleEssence, WorkloadEntity, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasHomogeneity: Homogeneity
+    hasComputationalSequence: ComputationalSequence
+  }
+
+type ServiceTypeToClassAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    predicate: PredicateType!
+    subject: ServiceType!
+    object: Class!
+  }
+
+interface ServiceTypeToEntityAssociationMixin
+  {
+    subject: ServiceType!
+  }
+
+type ServiceTypeToFaultAssociation implements ServiceTypeToEntityAssociationMixin, EntityToFaultAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: NamedThing!
+    predicate: PredicateType!
+    object: NamedThing!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+  }
+
+type ServiceTypeToObservableFeatureAssociation implements EntityToObservableFeatureAssociationMixin, ServiceTypeToEntityAssociationMixin
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    object: NamedThing!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    predicate: PredicateType!
+    subject: ServiceType!
+    frequencyQualifier: FrequencyValue
+    severityQualifier: SeverityValue
+    onsetQualifier: Onset
+    sexQualifier: BiologicalSex
+  }
+
+type ServiceTypeToServiceTypePartAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    predicate: PredicateType!
+    subject: ServiceType!
+    object: ServiceType!
+  }
+
+type SeverityValue
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type SocioeconomicAttribute
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type SocioeconomicExposure implements ExposureEvent
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    hasAttribute: [SocioeconomicAttribute]!
+    timepoint: TimeType
+  }
+
+type SocioeconomicOutcome implements Outcome
+  {
+  }
+
+interface SpecificityQuantifier
+  {
+  }
+
+type Study
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type StudyPopulation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+interface StudyResult
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+type StudyVariable
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+interface SubclassesMixin
+  {
+    name: SymbolType
+    synonym: [LabelType]
+    xref: [Uriorcurie]
+  }
+
+interface SubjectOfInvestigation
+  {
+  }
+
+type SystemAttribute
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+  }
+
+type SystemEntity implements SubjectOfInvestigation
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasAttribute: [Attribute]
+  }
+
+type SystemOperation implements SubclassesMixin
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    synonym: [LabelType]
+  }
+
+type SystemOperationDomain implements ClassGroupingMixin, ControlEntityOrClassOrSubclasses
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasClassOrSubclasses: [Class]
+  }
+
+type SystemTaxon
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    hasTaxonomicRank: TaxonomicRank
+  }
+
+interface SystemTaxonToEntityAssociation
+  {
+    subject: SystemTaxon!
+  }
+
+type SystemToSystemAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: IndividualSystem!
+    object: IndividualSystem!
+  }
+
+interface TangibleEssence
+  {
+  }
+
+interface TangibleEssenceOrOccurrent
+  {
+  }
+
+type TaxonToTaxonAssociation
+  {
+    id: String!
+    iri: IriType
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    predicate: PredicateType!
+    negated: Boolean
+    qualifiers: [OntologyClass]
+    publications: [Publication]
+    hasEvidence: [EvidenceType]
+    knowledgeSource: InformationResource
+    primaryKnowledgeSource: InformationResource
+    aggregatorKnowledgeSource: [InformationResource]
+    timepoint: TimeType
+    type: String
+    category: [CategoryType]
+    subject: SystemTaxon!
+    object: SystemTaxon!
+  }
+
+type TaxonomicRank
+  {
+    id: String!
+  }
+
+type TerminationOutcome implements Outcome
+  {
+  }
+
+type TextMiningResult
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    license: String
+    rights: String
+    format: String
+    creationDate: Date
+  }
+
+interface ThingWithTaxon
+  {
+    inTaxon: [SystemTaxon]
+  }
+
+type Workload implements WorkloadEntity, TangibleEssence, OntologyClass
+  {
+    id: String!
+    iri: IriType
+    type: String
+    name: LabelType
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    inTaxon: [SystemTaxon]
+    hasComputationalSequence: ComputationalSequence
+  }
+
+type WorkloadBackgroundExposure implements ExposureEvent, ClassGroupingMixin, TangibleEssence, WorkloadEntity, ThingWithTaxon, OntologyClass
+  {
+    id: String!
+    type: String
+    description: NarrativeText
+    hasAttribute: [Attribute]
+    providedBy: [String]
+    xref: [Uriorcurie]
+    category: [CategoryType]!
+    name: LabelType
+    hasAttributeType: OntologyClass!
+    hasQuantitativeValue: [QuantityValue]
+    hasQualitativeValue: NamedThing
+    iri: IriType
+    timepoint: TimeType
+    hasClassOrSubclasses: [Class]
+    hasComputationalSequence: ComputationalSequence
+    inTaxon: [SystemTaxon]
+  }
+
+interface WorkloadEntity
+  {
+    hasComputationalSequence: ComputationalSequence
+  }
+

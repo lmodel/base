@@ -1,0 +1,2439 @@
+// An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
+message Activity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// A event intended for use in the operational administration, mitigation, repair, or prevention of fault
+message AdministrativeOperation
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  controlMixture isSupplement = 0
+  string highestRegulatorApprovalStatus = 0
+  string administrativeOperationRegulatoryStatusWorldWide = 0
+ repeated  deliveryEnum routesOfDelivery = 0
+ }
+// An intake of a particular administrative operation.
+message AdministrativeOperationExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  timeType timepoint = 0
+ }
+// An interaction between a administrative operation and a class or subclasses.
+message AdministrativeOperationToClassAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  classOrSubclasses object = 0
+ }
+// person, group, organization or project that provides a piece of information (i.e. a knowledge association)
+message Agent
+ {
+  iriType iri = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  uriorcurie affiliation = 0
+  string address = 0
+  string id = 0
+  labelType name = 0
+ }
+message Article
+ {
+  iriType iri = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ repeated  string authors = 0
+ repeated  string pages = 0
+  string summary = 0
+ repeated  string keywords = 0
+ repeated  uriorcurie lcshTerms = 0
+ repeated  uriorcurie xref = 0
+  string id = 0
+  labelType name = 0
+  string type = 0
+  uriorcurie publishedIn = 0
+  string isoAbbreviation = 0
+  string volume = 0
+  string issue = 0
+ }
+// A stable assembly of two or more assemblies, i.e. system operation, redundancy entity, etc, in which at least one component is a system operation and the constituent parts function together
+message AssemblyComplex
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// A functional association between a assembly (class, subclasses or complex) and a component where the entity carries out its function in the component.
+message AssemblyToComponentAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  assemblyMixin subject = 0
+  component object = 0
+ }
+// A functional association between a assembly (class, subclasses or complex) and a computational process or pathway where the entity carries out some part of the process, regulates it, or acts upstream of it.
+message AssemblyToComputationalProcessAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  assemblyMixin subject = 0
+  computationalProcess object = 0
+ }
+// A functional association between a assembly (class, subclasses or complex) and a operational activity where the entity carries out the activity, or contributes to its execution.
+message AssemblyToOperationalActivityAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  assemblyMixin subject = 0
+  operationalActivity object = 0
+ }
+// A typed association between two entities, supported by evidence
+message Association
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+ }
+// A property or characteristic of an entity. For example, an apple may have properties such as color, shape, age, crispiness. An environmental sample may have attributes such as depth, lat, long, material.
+message Attribute
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+message Behavior
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  computationalProcessOrActivity hasInput = 0
+ repeated  computationalProcessOrActivity hasOutput = 0
+ repeated  systemEntity enabledBy = 0
+ }
+// An association between an aggregate behavior and a behavioral feature manifested by the element exhibited or has exhibited the behavior.
+message BehaviorToBehavioralFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  behavior subject = 0
+  behavioralFeature object = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  biologicalSex sexQualifier = 0
+ }
+// A behavioral exposure is a factor relating to behavior impacting an individual.
+message BehavioralExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  timeType timepoint = 0
+ }
+// A observable feature which is behavioral in nature.
+message BehavioralFeature
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+message BiologicalSex
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// This class may rarely be instantiated except if use cases of a given knowledge graph support its utility.
+message Book
+ {
+  iriType iri = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ repeated  string authors = 0
+ repeated  string pages = 0
+  string summary = 0
+ repeated  string keywords = 0
+ repeated  uriorcurie lcshTerms = 0
+ repeated  uriorcurie xref = 0
+  labelType name = 0
+  string id = 0
+  string type = 0
+ }
+message BookChapter
+ {
+  iriType iri = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ repeated  string authors = 0
+ repeated  string pages = 0
+  string summary = 0
+ repeated  string keywords = 0
+ repeated  uriorcurie lcshTerms = 0
+ repeated  uriorcurie xref = 0
+  string id = 0
+  labelType name = 0
+  string type = 0
+  uriorcurie publishedIn = 0
+  string volume = 0
+  string chapter = 0
+ }
+// An individual instance of a particular situation; an example of something occuring
+message Case
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// An association between a case (e.g. individual element) and a observable feature in which the element has or has had the observable feature.
+message CaseToObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  biologicalSex sexQualifier = 0
+ }
+// A result of a chi squared analysis
+message ChiSquaredAnalysisResult
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// collection of items in an ontology sharing common characteristics. Classes provide an abstraction mechanism for grouping resources with similar characteristics.
+message Class
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+  string symbol = 0
+ repeated  labelType synonym = 0
+ repeated  uriorcurie xref = 0
+  computationalSequence hasComputationalSequence = 0
+ }
+// An association between a class and an expression site, possibly qualified by stage/timing info.
+message ClassToExpressionSiteAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  lifecycleStage stageQualifier = 0
+  ontologyClass quantifierQualifier = 0
+  classOrSubclasses subject = 0
+  deploymentEntity object = 0
+  predicateType predicate = 0
+ }
+message ClassToFaultAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  classOrSubclasses subject = 0
+  fault object = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+ }
+message ClassToObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  classOrSubclasses subject = 0
+  observableFeature object = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  biologicalSex sexQualifier = 0
+ }
+// An interaction between a class or subclasses and a computational process or pathway.
+message ClassToPathwayAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  classOrSubclasses subject = 0
+  pathway object = 0
+ }
+// A group of people banded together or treated as a group who share common characteristics. A cohort 'study' is a particular form of longitudinal study that samples a cohort, performing a cross-section at intervals through time.
+message Cohort
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// A Common Data Element (CDE) is a standardized, precisely defined question, paired with a set of allowable responses, used systematically across different sites, studies, or clinical trials to ensure consistent data collection. Multiple CDEs (from one or more Collections) can be curated into Forms. (https://cde.nlm.nih.gov/home)
+message CommonDataElement
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// A complex operational mixture is a control mixture composed of two or more operational entities with unknown concentration
+message ComplexOperationalMixture
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  controlMixture isSupplement = 0
+  string highestRegulatorApprovalStatus = 0
+  string administrativeOperationRegulatoryStatusWorldWide = 0
+ repeated  deliveryEnum routesOfDelivery = 0
+ }
+// The component is the smallest system entity that can be deployed, isolated, and restored independently. A self-contained assembly of parts within a complete operating unit or module, which cannot be further subdivided without loss of identity or function.
+message Component
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+message ComponentSystem
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// A component type defines the set of components running the same software and sharing the same configuration. It's a single point of configuration control.
+message ComponentType
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// One or more causally connected executions of operational functions
+message ComputationalProcess
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  computationalProcessOrActivity hasInput = 0
+ repeated  computationalProcessOrActivity hasOutput = 0
+ repeated  systemEntity enabledBy = 0
+ }
+// Either an individual operational activity, or a collection of causally connected operational activities
+message ComputationalProcessOrActivity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  computationalProcessOrActivity hasInput = 0
+ repeated  computationalProcessOrActivity hasOutput = 0
+ repeated  systemEntity enabledBy = 0
+ }
+// Level of confidence in a statement
+message ConfidenceLevel
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// Any association between an entity (such as a publication) and various agents that contribute to its realisation
+message ContributorAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  informationContentEntity subject = 0
+  predicateType predicate = 0
+  agent object = 0
+ repeated  ontologyClass qualifiers = 0
+ }
+// A control entity is a entity that pertains to control or orchestration
+message ControlEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+ }
+message ControlEntityAssessesNamedThingAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  controlEntity subject = 0
+  namedThing object = 0
+  predicateType predicate = 0
+ }
+// A control exposure is an intake of a particular control entity
+message ControlExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  timeType timepoint = 0
+ }
+// A control mixture is a control entity composed of two or more operational entities.
+message ControlMixture
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  controlMixture isSupplement = 0
+  string highestRegulatorApprovalStatus = 0
+  string administrativeOperationRegulatoryStatusWorldWide = 0
+ repeated  deliveryEnum routesOfDelivery = 0
+ }
+// A role played by the entity or part thereof within a control context.
+message ControlRole
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// A relationship between two control entities. This can encompass actual interactions as well as temporal causal edges, e.g. one control converted to another.
+message ControlToControlAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  controlEntity object = 0
+ }
+// An interaction between a control entity and a observable feature or fault, where the presence of the control gives rise to or exacerbates the observable feature.
+message ControlToFaultOrObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  faultOrObservableFeature object = 0
+ }
+// An interaction between a control entity and a computational process or pathway.
+message ControlToPathwayAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  controlEntity subject = 0
+  pathway object = 0
+ }
+message ControllableClassToFaultAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  fault object = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  classOrSubclasses subject = 0
+  predicateType predicate = 0
+ repeated  controllableClassCategoryEnum hasEvidence = 0
+ }
+// an item that refers to a collection of data from a data source.
+message Dataset
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// an item that holds distribution level information about a dataset
+message DatasetDistribution
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+  string distributionDownloadUrl = 0
+ }
+// an item that holds summary level information about a dataset.
+message DatasetSummary
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+  string sourceWebPage = 0
+  string sourceLogo = 0
+ }
+// an item that holds version level information about a dataset.
+message DatasetVersion
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+  dataset hasDataset = 0
+  string ingestDate = 0
+  datasetDistribution hasDistribution = 0
+ }
+// A process location, or gross deployment part
+message DeploymentEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment.
+message Device
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// Attributes relating to a empirical manifestation
+message EmpiricalAttribute
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// The course an entity typically takes from its onset, progression in time, and eventual resolution or termination of affected entity, without obstruction.
+message EmpiricalCourse
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// Any entity or process that exists in the empirical domain and outside the computational realm. Failures are placed under computational entities
+message EmpiricalEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// this category is currently considered broad enough to tag empirical lab measurements and other computational attributes taken as 'empirical traits' with some statistical score, for example, a p value in acquired associations.
+message EmpiricalFinding
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  empiricalAttribute hasAttribute = 0
+ }
+message EmpiricalIntervention
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// A empirical measurement is a special kind of attribute which results from a quality of entity observation from a subject individual or sample. Measurements can be connected to their subject by the 'has attribute' slot.
+message EmpiricalMeasurement
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  ontologyClass hasAttributeType = 0
+ }
+// Used to characterize and specify the observable changes with respect to severity, and other aspects
+message EmpiricalModifier
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+message EntityToFaultAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  regulatorApprovalStatusEnum regulatorApprovalStatus = 0
+ }
+message EntityToObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  regulatorApprovalStatusEnum regulatorApprovalStatus = 0
+ }
+// A environmental exposure is a factor relating to abiotic processes in the environment
+message EnvironmentalExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  timeType timepoint = 0
+ }
+message EnvironmentalFeature
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+message EnvironmentalProcess
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// Something that happens at a given place and time.
+message Event
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// Class of evidence that supports an association
+message EvidenceType
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// Any association between an environment and a observable feature, where being in the environment influences the observable feature.
+message ExposureEventToObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  exposureEvent subject = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  biologicalSex sexQualifier = 0
+ }
+// An association between an exposure event and an outcome.
+message ExposureEventToOutcomeAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  populationOfIndividualSystems populationContextQualifier = 0
+  timeType temporalContextQualifier = 0
+ }
+// A disorder of structure or function, especially one that produces specific signs, observable features or symptoms or that affects a specific location and is not simply a direct result of injury.
+message Fault
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// Either one of a fault or an individual observable feature.
+message FaultOrObservableFeature
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// A fault or observable feature state, when viewed as an exposure, represents an precondition, leading to or influencing an outcome
+message FaultOrObservableFeatureExposure
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+  timeType timepoint = 0
+ }
+// An association between either a fault or a observable feature and an named thing, where the fault/feature manifests in that site.
+message FaultOrObservableFeatureToLocationAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  deploymentEntity object = 0
+ }
+// An association between an exposure event and a fault.
+message FaultToExposureEventAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+ }
+// An association between a fault and a observable feature in which the observable feature is associated with the fault in some way.
+message FaultToObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  fault subject = 0
+  observableFeature object = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  biologicalSex sexQualifier = 0
+ }
+// An abnormal deployment structure, when viewed as an exposure, representing an precondition, leading to or influencing an outcome,
+message FaultyDeploymentExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  timeType timepoint = 0
+ }
+// An deployment structure with the potential of have an abnormal or deleterious effect at the process, component, system, or group level.
+message FaultyDeploymentStructure
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// A computational function or a process having an abnormal or deleterious effect at the process, component, component type, or system level.
+message FaultyProcess
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  computationalProcessOrActivity hasInput = 0
+ repeated  computationalProcessOrActivity hasOutput = 0
+ repeated  systemEntity enabledBy = 0
+ }
+// A faulty process, when viewed as an exposure, representing a precondition, leading to or influencing an outcome,
+message FaultyProcessExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  timeType timepoint = 0
+ }
+// An association between a assembly mixin (class, subclasses, or complex of subclasses) and either a operational activity, a computational process or a component location in which a function is executed
+message FunctionalAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  assemblyMixin subject = 0
+  ontologyClass object = 0
+ }
+// A geographic exposure is a factor relating to geographic proximity to some impactful entity.
+message GeographicExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  timeType timepoint = 0
+ }
+// a location that can be described in lat/long coordinates
+message GeographicLocation
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  float latitude = 0
+  float longitude = 0
+ }
+// a location that can be described in lat/long coordinates, for a particular time
+message GeographicLocationAtTime
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  float latitude = 0
+  float longitude = 0
+  timeType timepoint = 0
+ }
+// the quality or state of being all the same or all of the same kind.
+message Homogeneity
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// An instance of an system. For example, human. Computer, my pet cat.
+message IndividualSystem
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// association between a named thing and a information content entity where the specific context of the relationship between that named thing and the publication is unknown. For example, model system databases often capture the knowledge that a named thing is found in a journal article, but not specifically the context in which that named thing was documented in the article. In these cases, this association with the accompanying predicate 'mentions' could be used. Conversely, for more specific associations (like 'named thing to fault association', the publication should be captured as an edge property).
+message InformationContentEntityToNamedThingAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  namedThing subject = 0
+  namedThing object = 0
+  predicateType predicate = 0
+ }
+// A database or knowledgebase and its supporting ecosystem of interfaces and services that deliver content to consumers (e.g. web portals, APIs, query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases.
+message InformationResource
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// The pattern or 'mode' in which a particular acquired trait or disorder is passed from one generation to the next
+message Inheritance
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// A stage of development or growth of a system.
+message LifecycleStage
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// A sample is a limited quantity of something (e.g. an individual or set of individuals from a population, or a portion of a event) to be used for testing, analysis, inspection, investigation, demonstration, or trial use. [SIO]
+message MaterialSample
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+message NamedSequence
+ {
+  computationalSequence hasComputationalSequence = 0
+ }
+// a databased entity or concept/class
+message NamedThing
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// A generic grouping for any identifiable entity
+message NamedThing
+ {
+  string id = 0
+  labelType name = 0
+  narrativeText description = 0
+ }
+// A combination of entity and quality that makes up a observation statement. An observable characteristic of an element resulting from the interaction of its observable feature with its operational and tangible environment.
+message ObservableFeature
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// A property of a observable
+message ObservableQuality
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+message OfflineMaintenance
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// The beginning or start in which manifestations appear
+message Onset
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// An execution of a operational function carried out by a subclasses or assembly complex.
+message OperationalActivity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  operationalEntity hasInput = 0
+ repeated  operationalEntity hasOutput = 0
+ repeated  assemblyMixin enabledBy = 0
+ }
+// Association that holds the relationship between a operational activity and the pathway it participates in.
+message OperationalActivityToPathwayAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  operationalActivity subject = 0
+  pathway object = 0
+  predicateType predicate = 0
+ }
+// A operational entity is a control entity composed of individual or bonded elements
+message OperationalEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  boolean isController = 0
+ }
+// A operational mixture is a control mixture composed of two or more operational entities with known concentration.
+message OperationalMixture
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  controlMixture isSupplement = 0
+  string highestRegulatorApprovalStatus = 0
+  string administrativeOperationRegulatoryStatusWorldWide = 0
+ repeated  deliveryEnum routesOfDelivery = 0
+ }
+message Pathway
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  computationalProcessOrActivity hasInput = 0
+ repeated  computationalProcessOrActivity hasOutput = 0
+ repeated  systemEntity enabledBy = 0
+ }
+// Represents a Person
+message Person
+ {
+  string id = 0
+  labelType name = 0
+  narrativeText description = 0
+  string primaryEmail = 0
+  date birthDate = 0
+  integer ageInYears = 0
+  personStatus vitalStatus = 0
+ }
+// A holder for Person objects
+message PersonCollection
+ {
+ repeated  person entries = 0
+ }
+// a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question
+message Phenomenon
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// An entity that has material reality (a.k.a. tangible essence).
+message PhysicalEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// Any entity or process that exists at the level of the whole planet
+message PlanetaryEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// A collection of individuals from the same taxonomic class distinguished by one or more characteristics. Characteristics can include, but are not limited to, shared geographic location, acquireds, observable features.
+message PopulationOfIndividualSystems
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// An association between a two populations
+message PopulationToPopulationAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  populationOfIndividualSystems subject = 0
+  populationOfIndividualSystems object = 0
+  predicateType predicate = 0
+ }
+// A series of actions conducted in a certain order or manner
+message Procedure
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ }
+// A control entity (often a mixture) processed for some use. Is an entity created or changed during processing.
+message ProcessedMaterial
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  controlMixture isSupplement = 0
+  string highestRegulatorApprovalStatus = 0
+  string administrativeOperationRegulatoryStatusWorldWide = 0
+ repeated  deliveryEnum routesOfDelivery = 0
+ }
+// Any published piece of information. Can refer to a whole publication, its encompassing publication (i.e. journal or book) or to a part of a publication, if of significant knowledge scope (e.g. a figure, figure legend, or section highlighted by NLP). The scope is intended to be general and include information published on the web, as well as printed materials, either directly or in one of the Publication Baselink category subclasses.
+message Publication
+ {
+  iriType iri = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ repeated  string authors = 0
+ repeated  string pages = 0
+  string summary = 0
+ repeated  string keywords = 0
+ repeated  uriorcurie lcshTerms = 0
+ repeated  uriorcurie xref = 0
+  string id = 0
+  labelType name = 0
+  string type = 0
+ }
+// A value of an attribute that is quantitative and measurable, expressed as a combination of a unit and a numeric value
+message QuantityValue
+ {
+  unit hasUnit = 0
+  double hasNumericValue = 0
+ }
+message ReactionToCatalystAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  integer ratios = 0
+  reactionDirectionEnum reactionDirection = 0
+  reactionSideEnum reactionSide = 0
+  operationalEntity subject = 0
+  classOrSubclasses object = 0
+ }
+message ReactionToParticipantAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  controlEntity object = 0
+  integer ratios = 0
+  reactionDirectionEnum reactionDirection = 0
+  reactionSideEnum reactionSide = 0
+  operationalEntity subject = 0
+ }
+// A redundancy entity is a operational entity
+message RedundancyEntity
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  boolean isController = 0
+  computationalSequence hasComputationalSequence = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// An OWL property used as an edge label
+message RelationshipType
+ {
+  string id = 0
+ }
+// The unit of service workload the component is capable of providing or protecting.
+message Replica
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  controlEntity tradeName = 0
+ repeated  namedThing availableFrom = 0
+  boolean isToxic = 0
+ repeated  controlRole hasControlRole = 0
+  boolean isController = 0
+  computationalSequence hasComputationalSequence = 0
+ repeated  systemTaxon inTaxon = 0
+ }
+// A restoration is targeted at a fault or observable feature and may involve multiple administrative operation 'exposures', engineering devices and/or procedures
+message Restoration
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  administrativeOperation hasAdministrativeOperation = 0
+ repeated  device hasDevice = 0
+ repeated  procedure hasProcedure = 0
+  timeType timepoint = 0
+ }
+// This class may rarely be instantiated except if use cases of a given knowledge graph support its utility.
+message Serial
+ {
+  iriType iri = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ repeated  string authors = 0
+ repeated  string pages = 0
+  string summary = 0
+ repeated  string keywords = 0
+ repeated  uriorcurie lcshTerms = 0
+ repeated  uriorcurie xref = 0
+  labelType name = 0
+  string isoAbbreviation = 0
+  string volume = 0
+  string issue = 0
+  string id = 0
+  string type = 0
+ }
+// An information content entity that describes a workload by specifying the total variation in workload sequence and/or workload expression, relative to some established background
+message ServiceType
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+  homogeneity hasHomogeneity = 0
+  computationalSequence hasComputationalSequence = 0
+ }
+// Any association between a service type and a class. The service type have have multiple variants in that class or a single one. There is no assumption of cardinality
+message ServiceTypeToClassAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  predicateType predicate = 0
+  serviceType subject = 0
+  class object = 0
+ }
+message ServiceTypeToFaultAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  namedThing subject = 0
+  predicateType predicate = 0
+  namedThing object = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+ }
+// Any association between one service type and a observable feature, where having the service type confers the observable feature, either in isolation or through environment
+message ServiceTypeToObservableFeatureAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  namedThing object = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  predicateType predicate = 0
+  serviceType subject = 0
+  frequencyValue frequencyQualifier = 0
+  severityValue severityQualifier = 0
+  onset onsetQualifier = 0
+  biologicalSex sexQualifier = 0
+ }
+// Any association between one service type and a service type entity that is a subset of it
+message ServiceTypeToServiceTypePartAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  predicateType predicate = 0
+  serviceType subject = 0
+  serviceType object = 0
+ }
+// describes the severity of a observable feature or fault
+message SeverityValue
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// Attributes relating to a socioeconomic manifestation
+message SocioeconomicAttribute
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// A socioeconomic exposure is a factor relating to social and financial status of an affected individual (e.g. poverty).
+message SocioeconomicExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ repeated  socioeconomicAttribute hasAttribute = 0
+  timeType timepoint = 0
+ }
+// a detailed investigation and/or analysis
+message Study
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// A group of individuals banded together as a group as participants in a research study.
+message StudyPopulation
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  attribute hasAttribute = 0
+ }
+// a variable that is used as a measure in the investigation of a study
+message StudyVariable
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// describes a characteristic of an system entity.
+message SystemAttribute
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+ }
+// A group that is composed of a chain of instructions and is produced by translation of service message
+message SystemOperation
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  labelType synonym = 0
+ }
+// The domain the system operation belongs to.
+message SystemOperationDomain
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+ repeated  class hasClassOrSubclasses = 0
+ }
+// A classification of a set of systems. Example instances: Can also be used to represent subsystems.
+message SystemTaxon
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  taxonomicRank hasTaxonomicRank = 0
+ }
+message SystemToSystemAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  individualSystem subject = 0
+  individualSystem object = 0
+ }
+message TaxonToTaxonAssociation
+ {
+  string id = 0
+  iriType iri = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+  predicateType predicate = 0
+  boolean negated = 0
+ repeated  ontologyClass qualifiers = 0
+ repeated  publication publications = 0
+ repeated  evidenceType hasEvidence = 0
+  informationResource knowledgeSource = 0
+  informationResource primaryKnowledgeSource = 0
+ repeated  informationResource aggregatorKnowledgeSource = 0
+  timeType timepoint = 0
+  string type = 0
+ repeated  categoryType category = 0
+  systemTaxon subject = 0
+  systemTaxon object = 0
+ }
+// A descriptor for the rank within a taxonomic classification. Example instance: TAXRANK:0000017 (kingdom)
+message TaxonomicRank
+ {
+  string id = 0
+ }
+// A result of text mining.
+message TextMiningResult
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  string license = 0
+  string rights = 0
+  string format = 0
+  date creationDate = 0
+ }
+// A workload is the sum of acquired material within a named thing.
+message Workload
+ {
+  string id = 0
+  iriType iri = 0
+  string type = 0
+  labelType name = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+ repeated  systemTaxon inTaxon = 0
+  computationalSequence hasComputationalSequence = 0
+ }
+// A workload background exposure is where an individual's specific workload background of named things, sequences or other pre-existing workload conditions constitute a kind of 'exposure' to the system, leading to or influencing an outcome.
+message WorkloadBackgroundExposure
+ {
+  string id = 0
+  string type = 0
+  narrativeText description = 0
+ repeated  attribute hasAttribute = 0
+ repeated  string providedBy = 0
+ repeated  uriorcurie xref = 0
+ repeated  categoryType category = 0
+  labelType name = 0
+  ontologyClass hasAttributeType = 0
+ repeated  quantityValue hasQuantitativeValue = 0
+  namedThing hasQualitativeValue = 0
+  iriType iri = 0
+  timeType timepoint = 0
+ repeated  class hasClassOrSubclasses = 0
+  computationalSequence hasComputationalSequence = 0
+ repeated  systemTaxon inTaxon = 0
+ }
